@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>摇奖</title>
+    <link rel="stylesheet" type="text/css" href="http://www.wangjiu.com/htmlResource/css/global.css " />
+    <link rel="stylesheet" href="css/choujiang2.css">
+    <script type="text/javascript" src="js/jquery-1.7.2-min.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+</head>
+<body>
+<div class="main_bg">
+    <div class="main">
+        <!--<div id="res" style="text-align:center;color:#fff;padding-top:15px;"></div>-->
+        <div class="num_mask"></div>
+        <div class="num_box">
+            <div class="num"><img src="images/num.png" alt=""></div>
+            <div class="num"><img src="images/num.png" alt=""></div>
+            <div class="num"><img src="images/num.png" alt=""></div>
+        </div>
+        <div class="btn"></div>
+        <ul id="marquee">
+            <li>
+                <p>满1000减50电视优惠券（爆款除外）</p>
+                <p>满1500减100电视优惠券（爆款除外）</p>
+                <p>满100减5元配件&娱乐周边优惠券</p>
+                <p>满100减10配件&娱乐周边券(移动专享)</p>
+                <p>满199减19元优惠券（生态爆品专用）</p>
+                <p>7天乐视超级体育会员激活码</p>
+                <p>电视爆款包括：X40S、X43S、超4 X50、超3 X55</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 文本滚动 -->
+<script type="text/javascript"> 
+    var Marquee = function(id){
+        var container = document.getElementById(id);
+        var original = container.getElementsByTagName("li")[0];
+        var speed = arguments[1] || 30;
+        var clone = original.cloneNode(true);
+        container.appendChild(clone);
+        var rolling = function(){
+            if(container.scrollTop == clone.offsetTop){
+                container.scrollTop = 0;
+            }else{
+                container.scrollTop++;
+            }
+        };
+        setInterval(rolling,speed);
+
+    };
+    window.onload = function(){
+        Marquee("marquee");
+    }
+</script>
+<!-- 抽奖滚动 -->
+<script  type="text/javascript">
+$(document).ready(function (){
+    setTimeout(function(){
+        for(var i=1;i<$('img').length;i++){
+            remove($('img').eq(i));
+        }
+    },100000);
+    //点击次数
+    var now=0;     
+    //设置中奖次数
+    var count=3;
+    var temp=-1;
+    var arr=['0','0','0'];
+    var u = 265;
+    var isBegin = false;
+    //.num布局
+    $('.num').each(function(index){
+        $(this).css({
+            left:index*181+'px'
+        });
+    });
+    //点击抽奖
+    $('.btn').click(function(){
+        if(isBegin){
+            return false;
+        }
+        isBegin = true;
+        for(var i=0;i<arr.length;i++){
+            $(".num").eq(i).css('bottom',arr[i]);
+            console.log($(".num").eq(i).css('bottom'));
+        }
+        var result = numRand();
+        $('#res').text('随机摇奖结果 = '+result);
+        var num_arr = (result+'').split('');
+        console.log( num_arr);
+        $(".num").each(function(index){
+            var _this = $(this);
+            for(var i=0;i<10;i++){
+                $(_this).prepend($('<img src="images/num.png" alt="">'));
+            }
+            setTimeout(function(){
+                //重新设置初始位置
+                $(_this).css({
+                    bottom:  -((u*(9-num_arr[index])+1200))
+                });
+                //运动10圈后到达指定位置
+                $(_this).animate({
+                    bottom: -(u*60+ (u*(9-num_arr[index])))
+                },{
+                    //每一个运动不同的时间
+                    duration: 1000+index*1000,
+                    easing: "easeInOutCirc",
+                    complete: function(){
+                        if(index==2){
+                            isBegin = false;
+                            now++;
+                            if(now<=count){
+                                alert('在玩一次');
+                            }
+                        }
+
+                        if(now>count&&index==2){
+
+                            alert('中奖不容易，且玩且珍惜');
+                        }
+
+                    }
+                });
+
+                arr=[];
+                arr.push(_this.css('bottom'));
+                console.log(arr);
+                //不同时动
+//                                  }, index * 300);
+                //同时动
+            }, 30);
+
+        });
+    });
+
+function numRand(){
+//  保证前三次必中奖
+    if(now<count){
+        var rand=Math.round(Math.random()*9);
+        //第一个强制不等于0，否则就没有旋转效果了
+        while(rand==0){
+            rand=Math.round(Math.random()*9);
+        }
+        //连续两次中奖不相等
+        while(rand==temp){
+            rand=Math.round(Math.random()*9);
+        }
+        temp=rand;
+        var res=rand*100+rand*10+rand;
+        if(res<100){
+            if(res<10){
+                res='00'+res;
+            }else{
+                res='0'+res;
+            }
+        }
+//      now++;
+        return res;
+    }else{
+
+        var randX=Math.round(Math.random()*9);//随机第一个数
+        var randY=Math.round(Math.random()*9);//随机第二个数
+        var randZ=Math.round(Math.random()*9);//随机第三个数
+        while(randX==randY&&randY==randZ){
+            randX=Math.round(Math.random()*9);
+            randY=Math.round(Math.random()*9);
+            randZ=Math.round(Math.random()*9);
+        }
+        var res=randX*100+randY*10+randZ;
+        if(res<100){
+            if(res<10){
+                res='00'+res;
+            }else{
+                res='0'+res;
+            }
+        }
+        return res;
+    }
+
+}
+
+    });
+</script>
+</body>
+</html>
+

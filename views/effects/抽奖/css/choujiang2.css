@@ -1,0 +1,94 @@
+html,body{
+    margin:0;
+    padding:0;
+    overflow:auto;
+}
+
+.main_bg{
+    height:1000px;
+    background: #ccc;
+}
+.main{
+    width:1000px;
+    height:1000px;
+    position:relative;
+    margin:0 auto;
+}
+.num_mask{
+    height:267px;
+    width:568px;
+    background: yellow;
+    position:absolute;
+    left:50%;
+    top:287px;
+    margin-left:-284px;
+    z-index:10;
+    opacity: .5;
+    overflow: hidden;
+}
+.num_box{
+    height:267px;
+    width:568px;
+    position: relative;
+    left: 50%;
+    top: 287px;
+    margin-left:-284px;
+    z-index:9;
+    overflow:hidden;
+    text-align:center;
+    background: red;
+    z-index:100;
+
+}
+.num{
+    position: absolute;
+    width:181px;
+    height:auto;
+    float:left;
+    margin-right:6px;
+    bottom: -2385px;
+}
+.num img{margin: 0;}
+.btn{
+    background:url(../images/btn_start.png) 0px 0px no-repeat;
+    width:264px;
+    height:89px;
+    position:absolute;
+    left:50%;
+    bottom:330px;
+    margin-left:-132px;
+    cursor:pointer;
+    clear:both;
+}
+#res{
+    width: 200px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: -100px;
+}
+#marquee,#marquee li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#marquee {
+    overflow: hidden;
+    position:absolute;
+    left: 50%;
+    bottom: 100px;
+    width:500px;
+    height:200px;
+    margin-left: -250px;
+    background: #fff;
+    border-radius: 10px;
+}
+#marquee p {
+    padding:5px;
+    white-space: nowrap;
+    color:#000;
+    font-size: 14px;
+    line-height: 20px;
+}

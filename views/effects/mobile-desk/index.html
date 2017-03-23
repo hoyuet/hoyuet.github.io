@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的照片墙</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            border: none;
+        }
+        div{
+            width:662px;
+            height: 410px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+        ul li{
+            float: left;
+            width: 190px;
+            height: 106px;
+            margin: 10px;
+            border: 2px solid white;
+        }
+        .active{
+            border: 2px dashed red;
+        }
+    </style>
+    <script src="move.js"></script>
+    <script>
+        window.onload=function(){
+            function drag(obj)
+            {
+                obj.onmousedown=function(ev){
+                    var oEvent=ev||event;
+                    var disX=oEvent.clientX-obj.offsetLeft;
+                    var disY=oEvent.clientY-obj.offsetTop;
+                    obj.style.zIndex=zIndex++;
+                    var oNear=null;
+                    document.onmousemove=function(ev){
+                        var oEvent=ev||event;
+                        obj.style.left=oEvent.clientX-disX+'px';
+                        obj.style.top=oEvent.clientY-disY+'px';
+
+                        //找最近
+                        oNear=findNear(obj);
+                        if(oNear){
+                            for(var i=0;i<aLi.length;i++){
+                                aLi[i].className='';
+                            }
+                            oNear.className='active';
+                        }else{
+                            for(var i=0;i<aLi.length;i++){
+                                aLi[i].className='';
+                            }
+                        }
+                    };
+                    document.onmouseup=function(){
+                        document.onmousemove=document.onmouseup=null;
+                        obj.releaseCapture&&obj.releaseCapture();
+
+                        //换位置
+                        if(oNear)
+                        {
+                            var n=oNear.index;
+                            var m=obj.index;
+                            if(m>n){
+                                for(var i=0; i<aLi.length; i++){
+                                    if(aLi[i].index>=n && aLi[i].index<m){
+                                        aLi[i].index++;
+                                    }
+                                    obj.index=n;
+                                }
+                                for(var i=0;i<aLi.length;i++){
+                                    move(aLi[i],aPos[aLi[i].index]);
+                                }
+                            }
+                            if(m<n){
+                                for(var i=0; i<aLi.length; i++){
+                                    if(aLi[i].index>m && aLi[i].index<=n){
+                                        aLi[i].index--;
+                                    }
+                                    obj.index=n;
+                                }
+                                for(var i=0;i<aLi.length;i++){
+                                    move(aLi[i],aPos[aLi[i].index]);
+                                }
+                            }
+
+                        }else{
+                            move(obj,aPos[obj.index])
+                        }
+                        for(var i=0;i<aLi.length;i++){
+                            aLi[i].className='';
+                        }
+                    };
+                    obj.setCapture&&obj.setCapture();
+
+                    oEvent.preventDefault&&oEvent.preventDefault();
+                };
+            }
+            function findNear(obj)
+            {
+                var nMin=9999999;
+                var nMinIndex=-1;
+                for(var i=0;i<aLi.length;i++){
+                    if(obj==aLi[i]){
+                        continue;
+                    }
+                    if(crash(obj,aLi[i])){
+                        var dis=getDis(obj,aLi[i]);
+                        if(dis<nMin){
+                            nMin=dis;
+                            nMinIndex=i;
+                        }
+                    }
+                }
+                if (nMinIndex == -1)
+                {
+                    return null;
+                }
+                else
+                {
+                    return aLi[nMinIndex];
+                }
+
+            }
+            //碰撞检测，碰上了返回true，否则false
+            function crash(obj1,obj2)
+            {
+                var l1=obj1.offsetLeft;
+                var r1=l1+obj1.offsetWidth;
+                var t1=obj1.offsetTop;
+                var b1=t1+obj1.offsetHeight;
+
+                var l2=obj2.offsetLeft;
+                var r2=l2+obj2.offsetWidth;
+                var t2=obj2.offsetTop;
+                var b2=t2+obj2.offsetHeight;
+
+
+                if(l2>r1||r2<l1||t2>b1||b2<t1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+            function getDis(obj1,obj2)
+            {
+                var a=obj1.offsetLeft+obj1.offsetWidth/2-(obj2.offsetLeft+obj2.offsetWidth/2);
+                var b=obj1.offsetTop+obj1.offsetHeight/2-(obj2.offsetTop+obj2.offsetHeight/2);
+                return Math.sqrt(a*a+b*b);
+            }
+
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.children;
+            var zIndex=1;
+
+            //布局转换
+            var aPos=[];
+            for(var i=0;i<aLi.length;i++){
+                aPos.push({
+                    left:aLi[i].offsetLeft,
+                    top:aLi[i].offsetTop
+                });
+            }
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].style.position='absolute';
+                aLi[i].style.left=aPos[i].left+'px';
+                aLi[i].style.top=aPos[i].top+'px';
+                aLi[i].style.margin=0+'px';
+            }
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                drag(aLi[i]);
+            }
+        };
+    </script>
+</head>
+<body>
+<div class="photoWall">
+    <ul id="ul1">
+        <li><img src="img/0.jpg" ></li>
+        <li><img src="img/1.jpg" ></li>
+        <li><img src="img/2.jpg" ></li>
+        <li><img src="img/3.jpg" ></li>
+        <li><img src="img/4.jpg" ></li>
+        <li><img src="img/5.jpg" ></li>
+        <li><img src="img/6.jpg" ></li>
+        <li><img src="img/7.jpg" ></li>
+        <li><img src="img/8.jpg" ></li>
+    </ul>
+</div>
+</body>
+</html>

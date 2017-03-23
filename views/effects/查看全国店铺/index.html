@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+<link rel="stylesheet" type="text/css" href="http://www.wangjiu.com/htmlResource/css/global.css">
+<style type="text/css">
+	body{
+		font-family: "microsoft yahei";
+		background: #fff;
+	}
+	div.search{
+		position: relative;
+		width: 1200px;
+		height: 369px;
+		background: #1E0A26;
+		margin: 0 auto;
+	}
+	div.search-title{
+		width: 1200px;
+		height: 45px;
+		padding-top: 10px;
+	} 
+	div.search-title div{
+		width: 203px;
+		height: 45px;
+		float: left;
+		font-size: 28px;
+		color: #fff;
+		text-align: center;
+	}
+	.province{
+		margin-left:30px;
+		background: url("img/1.jpg") no-repeat;
+	}
+	.province a{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		font-size: 28px;
+		color: #fff;
+	}
+	.shop-name{
+		margin-left:65px;
+		background: url("img/2.jpg") no-repeat;
+	}
+	.shop-addr{
+		margin-left:280px;
+		background: url("img/3.jpg") no-repeat;
+	}
+	ul.search-content{
+		width: 1200px;
+		height: 280px;
+		margin-top: 15px;
+		overflow:auto;
+	}
+	ul.search-content li{
+		height: 28px;
+		line-height: 28px;
+		color: #fff;
+		font-size: 16px;
+	}
+	ul.search-content li div{
+		float: left;
+	}
+	.detail-pro{
+		width: 200px;
+		height: 28px;
+		margin-left: 30px;
+		text-align: center;
+	}
+	.detail-nam{
+		width: 430px;
+		height:28px;
+		margin-left: 15px;
+	}
+	.detail-add{
+		width: 500px;
+		height: 28px;
+	}
+	.all-province{
+		display: none;
+		position: absolute;
+		width: 1130px;
+		height: 300px;
+		left: 30px;
+		top: 65px;
+		background: url("img/4.jpg") no-repeat;
+	}
+	.all-province a{
+		display: inline-block;
+		width:24.7%;
+		height: 46px;
+		line-height: 46px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+	}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//数据
+		var data=[
+			{'details':[[{'detail-pro':'安徽'},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黄山市乐松商贸有限公司店）'}
+				,{'detail-add':'安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店'}]]},
+			{'details':[[{'detail-pro':'吉林'},{'detail-nam':'松原江南金钻体验店'}
+				,{'detail-add':'吉林省松原市宁江区文化路471号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（集安市政府店）'}
+				,{'detail-add':'吉林四平市铁西区(北新华大街南,中央西路东,海丰大街北)伊馨家园'}]
+				,[{'detail-pro':''},{'detail-nam':'松原江南金钻体验店'}
+				,{'detail-add':'吉林省松原市宁江区文化路471号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（集安市政府店）'}
+				,{'detail-add':'吉林四平市铁西区(北新华大街南,中央西路东,海丰大街北)伊馨家园'}]
+				,[{'detail-pro':''},{'detail-nam':'松原江南金钻体验店'}
+				,{'detail-add':'吉林省松原市宁江区文化路471号'}]
+				,[{'detail-pro':''},{'detail-nam':'松原江南金钻体验店'}
+				,{'detail-add':'吉林省松原市宁江区文化路471号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（集安市政府店）'}
+				,{'detail-add':'吉林四平市铁西区(北新华大街南,中央西路东,海丰大街北)伊馨家园'}]
+				,[{'detail-pro':''},{'detail-nam':'松原江南金钻体验店'}
+				,{'detail-add':'吉林省松原市宁江区文化路471号'}]]}
+			,{'details':[[{'detail-pro':'黑龙江'},{'detail-nam':'乐视生态体验店（黑龙江省哈尔滨市南岗区一曼街店）'}
+				,{'detail-add':'黑龙江省哈尔滨市南岗区一曼街17号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黑龙江省哈尔滨市南岗区一曼街店）'}
+				,{'detail-add':'黑龙江省哈尔滨市南岗区一曼街17号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黑龙江省哈尔滨市南岗区一曼街店）'}
+				,{'detail-add':'黑龙江省哈尔滨市南岗区一曼街17号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黑龙江省哈尔滨市南岗区一曼街店）'}
+				,{'detail-add':'黑龙江省哈尔滨市南岗区一曼街17号'}]
+				,[{'detail-pro':''},{'detail-nam':'乐视生态体验店（黑龙江省哈尔滨市南岗区一曼街店）'}
+				,{'detail-add':'黑龙江省哈尔滨市南岗区一曼街17号'}]
+			]},
+			{'details':[[{'detail-pro':'内蒙古'},{'detail-nam':'内蒙古乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'内蒙古兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'内蒙古乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'内蒙古兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'内蒙古乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'内蒙古兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+			]},
+			{'details':[[{'detail-pro':'福建'},{'detail-nam':'福建乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'福建兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'福建乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'福建兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'福建乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'福建兴安盟扎赍特旗音德尔南路与山东街交汇处'}
+			]]},
+			{'details':[[{'detail-pro':'深圳'},{'detail-nam':'深圳乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'深圳兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'深圳乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'深圳兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'深圳乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'深圳兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'广东'},{'detail-nam':'广东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'广东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'广东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'河北'},{'detail-nam':'河北乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河北兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'河北乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河北兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'河北乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河北兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'山西'},{'detail-nam':'山西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'山西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'山西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'江苏'},{'detail-nam':'江苏乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江苏兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'江苏乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江苏兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'江苏乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江苏兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'上海'},{'detail-nam':'上海乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'上海兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'上海乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'上海兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'上海乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'上海兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'湖南'},{'detail-nam':'湖南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'湖南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'湖南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'湖南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'湖南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'湖南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'江西'},{'detail-nam':'江西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'江西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'江西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'江西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'河南'},{'detail-nam':'河南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'河南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'河南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'河南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'山东'},{'detail-nam':'山东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'山东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'山东乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'山东兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'甘肃'},{'detail-nam':'甘肃乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'甘肃兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'甘肃乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'甘肃兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'甘肃乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'甘肃兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'新疆'},{'detail-nam':'新疆乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'新疆兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'新疆乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'新疆兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'新疆乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'新疆兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'贵州'},{'detail-nam':'贵州乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'贵州兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'贵州乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'贵州兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'贵州乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'贵州兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'广西'},{'detail-nam':'广西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'广西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'广西乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'广西兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'云南'},{'detail-nam':'云南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'云南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'云南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'云南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'云南乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'云南兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'四川'},{'detail-nam':'四川乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'四川兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'四川乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'四川兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'四川乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'四川兴安盟扎赍特旗音德尔南路与山东街交汇处'}]]},
+			{'details':[[{'detail-pro':'浙江'},{'detail-nam':'浙江乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'浙江兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'浙江乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'浙江兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+				,[{'detail-pro':''},{'detail-nam':'浙江乐视生态体验店（兴安盟扎赉特旗店）'}
+				,{'detail-add':'浙江兴安盟扎赍特旗音德尔南路与山东街交汇处'}]
+			]}
+		];
+
+		//初始化，显示全国信息
+		for(var m=0;m<data.length;m++){
+			for(var n=0;n<data[m].details.length;n++){
+				var oLi=$('<li>'
+						+'<div class="detail-pro">'+data[m].details[n][0]['detail-pro']+'</div> '
+						+'<div class="detail-nam">'+data[m].details[n][1]['detail-nam']+'</div>'
+						+'<div class="detail-add">'+data[m].details[n][2]['detail-add']+'</div>'
+						+'</li>'
+				);
+				$('.search-content').append(oLi);
+			}
+
+		}
+		//点击全国，弹出层出现
+		$('.btn').click(function(){
+			$('.all-province').css({
+				display:'block'
+			});
+		});
+		//操作弹出层
+		$('.all-province a').each(function(i,target){
+			$(this).click(function(){
+				$('.all-province').css({
+					display:'none'
+				});
+				$('.province a.btn').text($(this).text());
+				$('.search-content').empty();
+				if(i!=0){
+					//显示各个城市信息
+					for(var j=0;j<data[i-1].details.length;j++){
+						var oLi=$('<li>'
+								+'<div class="detail-pro">'+data[i-1].details[j][0]['detail-pro']+'</div> '
+								+'<div class="detail-nam">'+data[i-1].details[j][1]['detail-nam']+'</div>'
+								+'<div class="detail-add">'+data[i-1].details[j][2]['detail-add']+'</div>'
+								+'</li>'
+						);
+						$('.search-content').append(oLi);
+					}
+				}else{
+					//显示全国信息
+					for(var m=0;m<data.length;m++){
+						for(var n=0;n<data[m].details.length;n++){
+							var oLi=$('<li>'
+									+'<div class="detail-pro">'+data[m].details[n][0]['detail-pro']+'</div> '
+									+'<div class="detail-nam">'+data[m].details[n][1]['detail-nam']+'</div>'
+									+'<div class="detail-add">'+data[m].details[n][2]['detail-add']+'</div>'
+									+'</li>'
+							);
+							$('.search-content').append(oLi);
+						}
+
+					}
+				}
+
+
+
+
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div class="search">
+	<div class="search-title">
+		<div class="province"><a href="javascript:;" class="btn">全国</a></div>
+		<div class="shop-name">店铺名称</div>
+		<div class="shop-addr">门店地址</div>
+	</div>
+	<ul class="search-content">
+		<!--<li>-->
+			<!--<div class="detail-pro">安徽</div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<div class="detail-pro"></div>-->
+			<!--<div class="detail-nam">乐视生态体验店（黄山市乐松商贸有限公司店）</div>-->
+			<!--<div class="detail-add">安徽省黄山市屯溪区维多利亚东苑52栋店面乐视生态体验店</div>-->
+		<!--</li>-->
+
+	</ul>
+	<div class="all-province">
+		<a href="javascript:;">全国</a>
+		<a href="javascript:;">安徽</a>
+		<a href="javascript:;">吉林</a>
+		<a href="javascript:;">黑龙江</a>
+		<a href="javascript:;">内蒙古</a>
+		<a href="javascript:;">福建</a>
+		<a href="javascript:;">深圳</a>
+		<a href="javascript:;">广东</a>
+		<a href="javascript:;">河北</a>
+		<a href="javascript:;">山西</a>
+		<a href="javascript:;">江苏</a>
+		<a href="javascript:;">上海</a>
+		<a href="javascript:;">湖南</a>
+		<a href="javascript:;">江西</a>
+		<a href="javascript:;">河南</a>
+		<a href="javascript:;">山东</a>
+		<a href="javascript:;">甘肃</a>
+		<a href="javascript:;">新疆</a>
+		<a href="javascript:;">贵州</a>
+		<a href="javascript:;">广西</a>
+		<a href="javascript:;">云南</a>
+		<a href="javascript:;">四川</a>
+		<a href="javascript:;">浙江</a>
+	</div>
+</div>
+</body>
+</html>

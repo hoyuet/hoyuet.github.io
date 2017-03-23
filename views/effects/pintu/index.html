@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>myphotowall</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+        #ul1{
+            /*width:306px;*/
+            /*height: 426px;*/
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        #ul1 li{
+            text-align: center;
+            /*line-height: 100px;*/
+            border: 1px solid #000;
+            color: #00ee00;
+            font-size: 50px;
+            font-weight: bold;
+            float: left;
+        }
+        #ul1 li.box{
+            border: 2px dashed tomato;
+        }
+        #btn{display: block;width:100px;height:30px;margin: 20px auto;}
+        .clear{clear: both;}
+    </style>
+    <script>
+       window.onload=function(){
+            var temp=-1;
+            var oBtn=document.getElementById('btn');
+            loading();
+            oBtn.onclick = function () {
+                loading();
+            };
+            function loading(){
+                //动态创建ul
+                var str="<ul id='ul1' >";
+                for(var i=0;i<9;i++){
+                    str+="<li>"+i+"</li>";
+                }
+                str+="</ul>";
+                var oMain=document.getElementById('main');
+                oMain.innerHTML=str;
+                var oUl=document.getElementById('ul1');
+                var aLi=oUl.children;
+
+                var zIndex=1000;
+                //背景布局
+                var liRand=randnum(0,8);//返回一个0-8的无规则数组，这个数组就是最终完整图片的顺序
+                console.log(liRand);
+                var imgs = ["img/0.jpg","img/1.jpg","img/2.jpg","img/3.jpg"];
+                var n=3;
+
+                var rand = parseInt(Math.random() * 4);
+                while (temp == rand) {
+                    rand = parseInt(Math.random() * 4);
+                }
+                temp = rand;
+
+                var img = new Image;
+                img.src = imgs[temp];
+                img.onload=function(){
+                   var imgW=img.width;
+                   var imgH=img.height;
+                   oUl.style.width=imgW+n*2+'px';
+                   oUl.style.height=imgH+n*2+'px';
+                   for(var i=0;i<9;i++){
+                       aLi[i].style.width=imgW/n+'px';
+                       aLi[i].style.height=imgH/n+'px';
+                       aLi[i].style.lineHeight=imgH/n+'px';
+                   }
+
+                   //背景定位
+                   for(var j=0;j<9;j++){
+                       var i=liRand[j];
+                       var x=(j%n)*(imgW/n);
+                       var y=parseInt(j/n)*(imgH/n);
+                       aLi[i].style.background="url("+img.src+") -"+x+"px -"+y+"px";
+                   }
+
+                   //布局转化
+                   var aPos=[];
+                   for(var i=0; i<aLi.length; i++){
+                       aPos[i]={
+                           left:aLi[i].offsetLeft,
+                           top:aLi[i].offsetTop
+                       };
+                   }
+
+                   for(var i=0; i<aPos.length; i++){
+                       aLi[i].style.left=aPos[i].left+'px';
+                       aLi[i].style.top=aPos[i].top+'px';
+                       aLi[i].style.position='absolute';
+                       aLi[i].style.margin=0;
+                   }
+                   //存储原始下标
+                   var arr=[];
+                   for(var i=0;i<aLi.length;i++){
+                       arr.push(i);
+                   }
+//                    console.log(arr);
+
+                   //拖拽
+                   for(var i=0; i<aLi.length; i++){
+                       drag(aLi[i]);
+                       aLi[i].index=i;
+                   }
+                    //拖拽函数
+                   function drag(obj){
+                       obj.onmousedown=function(ev){
+                           var oEvent=ev || event;
+                           var disX=oEvent.clientX-obj.offsetLeft;
+                           var disY=oEvent.clientY-obj.offsetTop;
+
+                           obj.style.zIndex=zIndex++;
+
+                           document.onmousemove=function(ev){
+                               var oEvent=ev || event;
+                               obj.style.left=oEvent.clientX-disX+'px';
+                               obj.style.top=oEvent.clientY-disY+'px';
+
+                               //检测碰撞
+                               for(var i=0; i<aLi.length; i++){
+                                   aLi[i].className='';
+                               }
+
+                               var oNear=findNear(obj);
+                               if(oNear){
+                                   oNear.className='box';
+                               }
+                           };
+                           document.onmouseup=function(){
+                               document.onmousemove=null;
+                               document.onmouseup=null;
+                               var oNear=findNear(obj);
+                               if(oNear){
+                                    //换位置
+                                    move(obj,aPos[oNear.index]);
+                                    move(oNear,aPos[obj.index]);
+
+                                    oNear.className='';
+                                    var tmp,tmp1;
+                                    tmp=obj.index;
+                                    obj.index=oNear.index;
+                                    oNear.index=tmp;
+                                    //改变移动位置的同时也要改变arr中布局的位置
+                                    tmp1=arr[obj.index];
+                                    arr[obj.index]=arr[oNear.index];
+                                    arr[oNear.index]=tmp1;
+
+                               }else{
+                                    //自己回到原位
+                                    move(obj,aPos[obj.index]);
+                               }
+                               if(arr.toString()==liRand.toString()){
+                                    setTimeout(function(){
+                                        alert('congratulations sir!');
+                                    },500);
+
+                               }
+                               console.log(arr);
+                           };
+                           return false;
+                       };
+                    }
+                    function move(obj,json,options){
+                        options=options || {};
+                        options.duration=options.duration || 500;
+                        options.easing=options.easing || 'linear';
+
+                        var count=Math.floor(options.duration/30);
+
+                        var start={};
+                        var dis={};
+                        for(var name in json){
+                            start[name]=parseFloat(getStyle(obj,name));
+                            if(isNaN(start[name])){
+                                switch (name){
+                                    case 'left':
+                                        start[name]=obj.offsetLeft;
+                                        break;
+                                    case 'top':
+                                        start[name]=obj.offsetTop;
+                                        break;
+                                    case 'width':
+                                        start[name]=obj.offsetWidth;
+                                        break;
+                                    case 'height':
+                                        start[name]=obj.offsetHeight;
+                                        break;
+                                    case 'opacity':
+                                        start[name]=1;
+                                        break;
+                                    case 'padding-left':
+                                        start[name]=0;
+                                        break;
+                                }
+                            }
+                            dis[name]=json[name]-start[name];
+                        }
+
+                        var n=0;
+                        clearInterval(obj.timer);
+                        obj.timer=setInterval(function(){
+                            n++;
+
+                            for(var name in json){
+
+                                switch (options.easing){
+                                    case 'linear':
+                                        var scale=n/count;
+                                        var cur=start[name]+dis[name]*scale;
+                                        break;
+                                    case 'ease-in':
+                                        var scale=n/count;
+                                        var cur=start[name]+dis[name]*Math.pow(scale,3);
+                                        break;
+                                    case 'ease-out':
+                                        var scale=1-n/count;
+                                        var cur=start[name]+dis[name]*(1-Math.pow(scale,3));
+                                        break;
+                                }
+
+                                if(name=='opacity'){
+                                    obj.style[name]=cur;
+                                    obj.style.filter='alpha(opacity:'+cur*100+')';
+                                }else{
+                                    obj.style[name]=cur+'px';
+                                }
+                            }
+
+                            if(n==count){
+                                clearInterval(obj.timer);
+                                options.complete && options.complete.call(obj);
+                            }
+                        },30);
+                    }
+                    function getStyle(obj,name){
+                        return (obj.currentStyle || getComputedStyle(obj,false))[name];
+                    }
+                    //findNear
+                    function findNear(obj){
+                        var iMin=new Date().getTime();
+                        var iMinIndex=-1;
+
+                        for(var i=0; i<aLi.length; i++){
+                            if(obj==aLi[i])continue;
+                            if(collTest(obj,aLi[i])){
+                                var dis=getDis(obj,aLi[i]);
+
+                                if(dis<iMin){
+                                    iMin=dis;
+                                    iMinIndex=i;
+                                }
+                            }
+                        }
+
+                        if(iMinIndex==-1){
+                            return null;
+                        }else{
+                            return aLi[iMinIndex];
+                        }
+                    }
+
+                    //找距离
+                    function getDis(obj,obj2){
+                        var l1=obj.offsetLeft+obj.offsetWidth/2;
+                        var l2=obj2.offsetLeft+obj2.offsetWidth/2;
+
+                        var t1=obj.offsetTop+obj.offsetHeight/2;
+                        var t2=obj2.offsetTop+obj2.offsetHeight/2;
+
+                        var a=l1-l2;
+                        var b=t1-t2;
+
+                        return Math.sqrt(a*a+b*b);
+                    }
+                    //碰撞检测
+                    function collTest(obj,obj2){
+                        var l1=obj.offsetLeft;
+                        var r1=obj.offsetLeft+obj.offsetWidth;
+                        var t1=obj.offsetTop;
+                        var b1=obj.offsetTop+obj.offsetHeight;
+
+                        var l2=obj2.offsetLeft;
+                        var r2=obj2.offsetLeft+obj2.offsetWidth;
+                        var t2=obj2.offsetTop;
+                        var b2=obj2.offsetTop+obj2.offsetHeight;
+
+                        if(r1<l2 || l1>r2 || b1<t2 || t1>b2){
+                            return false;
+                        }else{
+                            return true;
+                        }
+                    }
+                }
+                //随机取出值函数
+                function randnum(min,max){
+                    var str=[];
+                    var newstr=[];
+                    for(var i=min;i<=max;i++){str.push(i);}
+                    for(var i=min;i<=max;i++){
+                        var randNumber=parseInt(Math.random()*str.length);
+                        newstr.push(str[randNumber]);
+                        str.splice(randNumber,1);
+                    }
+                    return newstr;
+                }
+            }
+       };
+    </script>
+</head>
+<body>
+<button id="btn">换一张</button>
+<div id="main"></div>
+<!--<ul id="ul1">-->
+    <!--<li>0</li>-->
+    <!--<li>1</li>-->
+    <!--<li>2</li>-->
+    <!--<li>3</li>-->
+    <!--<li>4</li>-->
+    <!--<li>5</li>-->
+    <!--<li>6</li>-->
+    <!--<li>7</li>-->
+    <!--<li>8</li>-->
+<!--</ul>-->
+<div class="clear"></div>
+</body>
+</html>
