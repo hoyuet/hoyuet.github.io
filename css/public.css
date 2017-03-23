@@ -1,0 +1,53 @@
+body{background: #484F5A;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif}
+.left{float: left;}
+.right{float: right;}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.icon-bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    border-radius: 1px;
+    background: #777;
+    margin-top: 5px;
+}
+#version{
+    width: 100px;height: 30px;background: red;position: fixed;right: 0;bottom: 20px;
+    font-size: 20px;line-height: 30px;
+}
+#version div{position: fixed;right: -100px;bottom: -20px;width: 100px;height: 200px;}
+#version div p{width: 100px;height: 30px;padding: 2px;background: black;color: #00AEFF;margin: 2px;}
+#set{
+    width: 270px;height: 600px;background: #666;position: fixed;left: -270px;top: 20px;
+}
+#set form{
+	width: 250px;height: 580px;margin: 10px;
+}
+#set form div input[type='radio']{
+	margin-right: 10px;
+}
+#set form div span{
+	width:48px;height:30px;background: #ccc;display: inline-block;margin-right: 10px;
+}
+#set form div span.index-html5-bg1{background: url("../images/bg/bg1.png") no-repeat;}
+#set form div span.index-html5-bg2{background: url(../images/bg/bg2.png) no-repeat;}
+#set form div span.index-html5-bg3{background: url(../images/bg/bg3.png) no-repeat;}
+#set form div span.index-html5-bg4{background: url(../images/bg/bg4.png) no-repeat;}
+#set form div span.index-html5-bg5{background: url(../images/bg/bg5.png) no-repeat;}
+#set form div span.index-html5-bg6{background: #484F5A;}
+
+#set span.icon{
+    display: block;width: 40px;height: 40px;position: absolute;right: -40px;top:0;
+}
+#set span.icon i{display:block;width: 40px;height: 40px;font-size: 20px;background: #fff;
+    color:#3B5998 ;text-align: center;line-height: 40px;
+}

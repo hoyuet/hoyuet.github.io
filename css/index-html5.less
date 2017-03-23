@@ -1,0 +1,428 @@
+@color0:#fff;
+@color1:red;
+@color2:purple;
+@color3:green;
+@color4:yellow;
+@color5:blue;
+#wrap{
+  width: 1130px;
+  height: 600px;
+  margin: 20px auto;
+  color: @color2;
+  .main-wrap{width: 750px;height: 600px;overflow: hidden;float: left;}
+  #index-aside-l{
+    width: 80px;
+    height: 600px;
+    float: left;
+    nav{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      ul{
+        width:80px;background: red;
+        li{position:relative;display: block;float: left;width: 100%;height: 76px;text-align: center;background: #3B5998;line-height: 75px;
+          i{width: 60%;height: 60%;display: inline-block;border-radius:50%;text-align: center;line-height: 45px;
+          font-size: 25px;color:#3B5998;background:  @color0;vertical-align: middle;}
+        }
+        li.on{background: @color0;cursor: pointer ;i{background: #3B5998;color: @color0;}}
+        li.active{background: @color0;i{background: #3B5998;color: @color0; }}
+      }
+      #nav-top{height:380px;position: absolute; top:0; left: 0;}
+      #nav-bottom{height:150px;position: absolute; bottom:-7px; left: 0;}
+    }
+  }
+  #index-aside-r{
+    width: 280px;
+    height: 600px;
+    background: #3B5998;
+    float: left;
+    padding: 10px;
+    padding-top: 0px;
+    figure{
+      width: 150px;height: 150px;margin: 20px auto;border-radius: 50%;overflow: hidden;
+      img{
+        width: 100%;height: 100%; display:block;
+      }
+    }
+    .about{
+      width: 100%;;height: 100px;border-bottom: 1px solid #839CCF;
+      p,address{width: 100%;height: 20px;text-align: center;line-height: 20px;color:#839CCF;}
+
+    }
+    .motto{
+      width: 100%;
+      height: 135px;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #839CCF;
+      color:#839CCF;
+      p{width: 100%;height: 30px;text-align: right;}
+    }
+    .search{
+      width: 100%;height: 80px;padding: 20px 10px 0px 10px;
+      input{display: inline-block;float: right;}
+      input.inp{width: 170px;height: 40px;background: #fff;}
+      input.btn{-width: 70px;height: 40px;background: #ccc;color:#839CCF;}
+      border-bottom: 1px solid #839CCF;
+    }
+    .contact{
+      width: 100%;height: 80px;
+      padding:-10px 10px 10px 10px;
+      background: #3B5998;
+      p{width: 100%;height: 30px;text-align: center;font-size: 18px;padding: 10px 0px;color:#839CCF;}
+      ul{
+        width: 225px;height: 35px;margin: 10px auto;
+        li{
+          width: 35px;height: 35px;float: left;margin:0 5px;border: 1px solid #fff;
+          a{width: 100%;height: 100%;display: block;
+            i{width: 100%;height: 100%;display: block;line-height: 35px;text-align: center;font-size: 25px;
+              color:#fff;}
+          }
+        }
+        li:hover{ 
+        background: #fff;
+        a{text-decoration: none;list-style: none;
+          i{color:#3b5998;}
+          }
+        }
+      }
+    }
+
+  }
+  #index-home{
+    display: block;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article{width: 100%;height: auto;background: #f4f4f4;padding:15px;
+      header{width:100%;height:40px;font-size:25px;line-height:35px;color:#5d84b4;border-bottom:1px solid #f6f6f6;padding-left:30px;background:url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;}
+      .profile{width: 100%;height: 456px;}
+      aside{
+        width:348px;height:456px;padding:20px 10px;
+      }
+      .profile-l{float:left;
+        h4{width: 100%;height: 30px;border-bottom:1px solid #f6f6f6;}
+        .detail{
+          width: 100%;height: 200px;padding: 10px 0;
+          div{width: 100%;height: 30px;border-bottom:1px solid #f6f6f6;
+            p{
+              width: 200px;height: 30px;text-align: left;line-height:30px;float: left;margin: 0;
+              i{width: 20px;height: 20px;font-size: 18px; padding-right: 8px;}
+            }
+            p.title{width: 120px;}
+          }
+          div.last{border-bottom:none;}
+        }
+        section{width: 100%;height: auto;padding-bottom: 20px;i{padding-right: 5px;}}
+      }
+      .profile-r{float:right;padding:0px;}
+    }
+    section{width: 100%;
+      h3{width: 100%;height: 40px;font-weight:bold;text-align: left;border-bottom:1px solid #ddd;padding: 10px 0 50px 0;}
+      figure{
+        width: 234px;height: auto;float: left;text-align: center;padding-bottom: 20px;
+        i{
+          display:inline-block;width: 100px;height: 100px;font-size: 100px;border: 1px solid #3B5998;margin-bottom: 10px;
+          color: #3B5998;
+        }
+        P{
+          font-size: 15px;width: 100%;height: 15px;line-height: 15px;color: #999;
+        }
+        p.title{
+          font-size: 20px;
+        }
+      }
+      figure.skill{
+          width: 100px;height: 100px;
+          img{
+              width: 100%;height: 100%;padding: 2px;
+          }
+      }
+//    hr{width: 80%;height: 0px;border: 2px solid #3B5998;margin: 0 auto;}
+      &>div{
+        width: 100%;height: auto;margin-bottom: 10px;
+        span{display: block;width: 100%;height: 40px;line-height: 40px;color:#fff;font-size: 20px;
+          cursor: pointer;background-color:#3B5998;
+          i{width: 40px;height: 40px;text-align: center;line-height: 40px;color: #fff;}
+        }
+        p{display:none;width: 100%;height: auto;background-color: #fff;padding: 20px;color: #333;text-indent: 2em; }
+        p.on{display: block;}
+      }
+    }
+  }
+  #index-envelope {
+    display: none;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article{
+      width: 100%;height:auto;background: #f4f4f4;padding:15px;
+      header{width:100%;height:40px;font-size:25px;line-height:35px;color:#5d84b4;border-bottom:1px solid #f6f6f6;background:red;padding-left:30px;background:url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;}
+      .pagation{text-align: right;
+        width: 100%;height: 300px;padding: 10px;border: 2px solid #ccc;box-shadow: 2px 2px #ccc;
+        .pagation-content{
+          width: 100%;height: 240px;
+          div{text-align: left;
+              width: 100%;height: 30px;border-bottom: 1px dashed #CCCCCC;line-height: 30px;font-size: 16px;color: #000;
+              span{
+                  color: #C0C0C0;float: right;
+              }
+          }
+        }
+        .page-number{display: inline-block;
+            -width: 100%;height: 38px;text-align:center;margin-bottom: 20px;border: 1px solid #ccc;
+            a,span,input{
+                display: inline-block;width: 38px;height: 38px;margin: 0 5px;border: 1px solid #EBEBEB;
+                background: #bdbdbd;font-size: 14px;text-align: center;line-height: 38px;
+            }
+        }
+      }
+      #message{
+        width: 100%;height: auto;
+        h4{width:100%;height:40px;line-height:40px;border-bottom: 1px solid #ccc;}
+        form{
+          width: 100%;height: 325px;
+          input{
+            float: left;width: 100%; height: 50px;margin: 10px 0;
+            &#clear,&#send{
+              float: left;width: 80px;height:30px;margin-right: 20px;color: #fff;font-weight: bold;
+            }
+            &#clear{background: #c3c3c3;}
+            &#send{background:#3B5998;}
+          }
+          textarea{width: 100%;height: auto;}
+        }
+      }
+    }
+  }
+  #index-tasks {
+    display: none;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article{
+      width: 100%;height: auto;background: #F4F4F4;
+      header{width:100%;height:40px;font-weight:normal;font-size:25px;line-height:35px;color:#5d84b4;border-bottom:1px solid #ccc;padding-left:30px;background:url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;}
+      section{
+        width: 100%;height: auto;overflow: auto;
+        h4{color:#3B5998;
+          a{display: inline-block;float: right;padding: 0 15px;}
+        }
+        figure{
+          width: 230px;height:315px;margin: 5px 0px;margin-left: 11px;float: left;
+          overflow: hidden;
+          a{width: 230px;height: 315px;display: block;cursor: pointer;position: relative;
+            left: 0;top: 0px;
+            img{width: 100%;height: 100%;}
+          }
+          figcaption{position: relative;left: 0;top: 0px;
+             height: 30px;text-align: center;line-height: 30px;font-size: 20px;
+          }
+
+        }
+      }
+    }
+  }
+  #index-edit {
+    display: block;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article {
+      width: 100%;
+      height: auto;
+      background: #F4F4F4;
+      padding-bottom: 10px;
+      header {
+        width: 100%;
+        height: 40px;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        color: #5d84b4;
+        border-bottom: 1px solid #ccc;
+        padding-left: 30px;
+        background: url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;
+      }
+      section#carouse {
+        width: 625px;height: 260px;margin:0 auto;margin-top: 20px;margin-bottom: 20px;
+        padding: 0;
+      }
+      section{padding: 0 52px;
+        h4{color: #3B5998;}
+        div.details{
+          width: 100%;height: 30px;-background: red;text-align: right;line-height: 30px;font-size: 20px;
+          margin-top: 15px;margin-bottom: 15px;
+          span{
+            display: inline-block;width: 48px;padding-left: 10px;color: #2d6987;
+
+          }
+          time{
+            display: inline-block;width: 133px;padding-left: 10px;color:#2d6987;
+          }
+          i{cursor: pointer;}
+
+        }
+        div.content{
+          position: relative;left: 0;top: 0;
+          color: #595959;line-height: 24px;font-size: 18px;text-indent: 2em;overflow: hidden;
+          a{
+            display:none;width: 100%;height: 100%;background: #0a2234;opacity: .5;
+            text-align: center;color: #fff;font-weight: bold;
+            position: absolute;left: 0;top:144px;
+          }
+        }
+      }
+    }
+  }
+  #index-coffee {
+    display: block;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article {
+      width: 100%;
+      height: auto;
+      background: #F4F4F4;
+      header {
+        width: 100%;
+        height: 40px;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        color: #5d84b4;
+        border-bottom: 1px solid #ccc;
+        padding-left: 30px;
+        background: url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;
+      }
+      section{
+        width:100%;height:auto;
+        form{
+          width:100%;height:auto;padding:5px 0;
+          button{
+            width:80px;height:30px;text-align:center;line-height:30px;border-radius:5px;
+            &.on{background:#67B168;}
+          }
+        }
+        div{
+            width:100%;height:520px;
+            a{
+                display: none;
+                position: relative;
+                display: inline-block;width: 240px;height: 165px;
+                padding: 10px 0 0 10px;    
+                overflow: hidden;
+                img{
+                    width: 100%;height: 100%;
+                }   
+                span{
+                    position: absolute;right: 0;bottom: -30px;z-index: 2;
+                    width: 230px;height: 30px;background: #737373;opacity: .7;
+                    text-align: center;line-height: 30px;font-size: 20px;color: #fff; 
+                    font-weight: 400;
+                }   
+            }
+        }
+      }
+    }
+  }
+  #index-link {
+    display: block;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article {
+      width: 100%;
+      height: auto;
+      background: #F4F4F4;
+      header {
+        width: 100%;
+        height: 40px;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        color: #5d84b4;
+        border-bottom: 1px solid #ccc;
+        padding-left: 30px;
+        background: url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;
+      }
+      section{
+        width:100%;height:550px;padding:0 20px 0 20px;
+        ul{
+          width:100%;height: auto;
+          li{
+            float: left;width: 50%;height: 40px;line-height: 40px;font-size: 18px;
+
+          }
+        }
+      
+       
+      }
+    }
+  }
+  
+  #index-book {
+    display: block;
+    width: 750px;
+    height: 600px;
+    float: left;
+    margin: 0 10px;
+    overflow-y: scroll;
+    article {
+      width: 100%;
+      height: auto;
+      background: #F4F4F4;
+      header {
+        width: 100%;
+        height: 40px;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 35px;
+        color: #5d84b4;
+        border-bottom: 1px solid #ccc;
+        padding-left: 30px;
+        background: url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat 0 8px;
+      }
+      section{
+        width:100%;height:560px;padding: 10px 0px 0px 65px;
+        h4{
+            text-align: right;color: #00B274;
+            button{width: 50px;height: 100%;border: none;margin-right: 20px;border-radius: 4px;}
+        }
+        div {
+          overflow: hidden;  position: relative;  float: left;  margin: 2px;
+          width: 200px;  height: 150px;  background: #ccc;
+          img{width: 100%;height: 100%;}
+          span {
+            position: absolute;  top: 0;  left: -200px;
+            width: 100%;  height: 100%;  background: green;  opacity: 0.3;
+            a{
+              display:inline-block;width: 100%;height: 100%;
+            }
+          }
+
+        }
+
+
+
+      }
+    }
+  }
+
+}
+

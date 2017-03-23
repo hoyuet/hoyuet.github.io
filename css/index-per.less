@@ -1,0 +1,226 @@
+div.per-wrap{
+  width: 100%;height: auto;
+  header.per-header{
+    width: 100%;height: 50px;background: #F8F8F8;position: fixed;left: 0;top: 0;
+    nav{
+      width: 100%;height: 100%;
+      div.per-brand{
+        width: 200px;height: 100%;float: left;
+        a{
+          width: 100%;height: 100%;
+          img{
+            width: 100%;height: 100%;padding: 0 20px;
+          }
+        }
+      }
+      div.per-nav{
+        height: 100%;
+        float: left;
+        ul{
+          height: 100%;
+          li{
+            float: left;height: 100%;display: inline-block;
+            a{
+              display:inline-block;width: 100%;height: 100%;line-height: 50px;padding: 0 16px;
+              background: #F8F8F8;  text-align: center;color: #777;font-weight: bold;
+              &.active{background:#E7E7E7;}
+              &:hover{
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+      form{
+        float: right;height: 100%;padding-right: 20px;line-height: 50px;
+        div{
+          height: 34px;margin-top: 8px;
+          input{
+            width: 110px; height: 34px;float: left;border:1px solid #ccc;border-radius:4px 0 0 4px;
+          }
+          button{
+            height: 34px;float: left;border:1px solid #ccc;border-radius:0 4px 4px 0;
+            padding: 0 10px;
+          }
+        }
+
+      }
+    }
+  }
+  main.per-main{
+    width: 100%;height:10000px;margin-top: 50px;padding: 0 20px;margin-bottom: 200px;
+    .per-title{
+      width: 100%;
+      height: 64px;
+      line-height: 64px;
+      padding: 0 30px;
+      font-size: 25px;
+      color: #5d84b4;
+      background: url("../images/arrows-h3/arrow-DarkBlue-h3.png") no-repeat left center ;
+    }
+    .per-content-l{
+      width: 50%;color: #333;
+      float: left;
+      h4{
+        font-size: 18px;
+        padding-left: 20px;
+        width: 100%;
+        line-height: 18px;
+      }
+      div{
+        width: 100%;
+        height: 30px;
+        padding-left: 40px;
+        &.quto{
+          width: 100%;
+          height: 100px;
+          line-height: 30px;
+        }
+        p{
+          width: 50%;
+          float: left;
+          height: 100%;
+          line-height: 30px;
+        }
+      }
+    }
+    .per-content-r {
+      width: 50%;
+      float: left;
+      text-align: center;
+    }
+    div.per-pros-title,.per-items-title{
+      width: 100%;
+      padding-left: 20px;
+      color: #333;
+      h3{
+        font-size: 24px;
+      }
+      .per-pros-content{
+        width: 100%;
+        height: 300px;
+        background: #fff;
+        margin: 15px 0;
+      }
+    }
+    .per-items-content{
+      width: 100%;
+      height: 200px;
+      div{
+        width: 100%;
+        span{
+          display: inline-block;
+          width: 100%;
+          height: 40px;
+          font-size: 20px;
+          line-height: 40px;
+        }
+        p{
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  div.per-footer{
+    width: 100%;height: 100px;background: #333;padding: 10px;position: fixed;bottom: 0;
+    left: 0;
+    .per-footer-link{
+      width: 100%;height: 50%;text-align: center;
+      a{
+        display: inline-block;width: 40px;height: 40px;font-size: 30px;color: #FFDD44;
+        line-height: 40px;text-align: center;
+        &:hover{
+          color: #3071A9;border-radius: 50%;background:#fff;transition: 0.5s all ease;
+        }
+      }
+    }
+    .per-footer-copyright{
+      width: 100%;height: 50%;text-align: center;
+      p{
+        width: 100%;height: 100%;text-align: center;
+        font-size: 24px;color: #fff;font-weight: bold;line-height: 40px;
+        a{
+          color: #FFDD44;
+          &:hover{
+            color: #3071A9;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) {
+  nav .per-nav,nav form{
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+    position: relative;
+    float: right;
+    padding: 4px 5px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #ddd;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    button{
+      width: 30px;
+      height: 20px;
+      border: none;
+      background: none;
+      padding-left: 2px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  nav .per-nav,nav form{
+    display: block;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  div.per-wrap header.per-header nav div.per-nav ul li a{
+    padding: 0 10px;
+  }
+  form{
+    div {
+      input {
+        display: none;
+      }
+    }
+  }
+  div.per-wrap header.per-header nav form div button{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  main.per-main{
+    width: 100%;height: 1000px;
+  }
+}
+@media (min-width: 993px){
+  div.per-wrap header.per-header nav div.per-nav ul li a{
+    padding: 0 18px;
+  }
+  form{
+    div {
+      input {
+        display: block;
+      }
+    }
+  }
+}
+@media (min-width: 1200px){
+  div.per-wrap header.per-header nav div.per-nav ul li a{
+    padding: 0 22px;
+  }
+  form{
+    div {
+      input {
+        display: block;
+      }
+    }
+  }
+}

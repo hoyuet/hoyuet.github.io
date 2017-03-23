@@ -1,0 +1,20 @@
+.tabs{position:relative;width: 100%;height: 100%; overflow: hidden;}
+.tabs ol,.tabs ol li{list-style: none; }
+.tabs ol{position: absolute;left: 50%;bottom: 50px;width: 160px;height: 15px;
+  margin-left:-80px;z-index: 1010;}
+.tabs ol li{
+  float: left;width: 15px;height: 15px;margin-left: 10px;
+  border-radius: 50%; background: #ED346C;
+  line-height: 15px;text-align: center;font-size: 15px;background: #00b274;
+}
+.tab-pane-wrap{width: 100%;height: 1920px;position: relative;}
+.tabs .tab-pane{
+  position:absolute;left:0;top:480px;width: 100%;height: 480px;
+  float: left;text-align: center;font-size: 50px;line-height: 250px;
+}
+.color0{background: url("../img-phpto/0.jpg") center no-repeat;}
+.color1{background: url("../img-phpto/1.jpg") center no-repeat;}
+.color2{background: url("../img-phpto/2.jpg") center no-repeat;}
+.color3{background: url("../img-phpto/3.jpg") center no-repeat;}
+ol li.on{background:red ;}
+.tabs .tab-pane.on{left: 0;top:0;}
