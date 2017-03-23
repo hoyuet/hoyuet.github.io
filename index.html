@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <title>My Website</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet/less" href="css/index-html5.less">
+    <link rel="stylesheet" type="text/css" href="css/hexagons.css"/>
+    <style>
+        .box{ width:606px; margin:0 auto; border:1px solid red; overflow:hidden;}
+        .box a,.box span{ float:left;}
+        .prveBtn{ width:62px; height:27px; border:1px solid  #cccccc; text-align:center; line-height:27px; background:url(img/jiao1.gif) no-repeat 3px center;}
+        .nextBtn{width:62px; height:27px; border:1px solid  #cccccc; text-align:center; line-height:27px; background:url(img/jiao2.gif) no-repeat 54px center;}
+        a.now{background: #2a85a0; color:#fff; font-weight:bold; line-height:29px; width:34px; text-align:center;}
+        .num{ width:28px; height:25px; border:1px solid #CCC; text-align:center; line-height:25px; margin-top:1px; margin-right:2px;}
+        .more{ width:34px; text-align:center; line-height:27px;}
+        .allpage{ margin-left:20px; line-height:27px;}
+        .txt1,.txt2{ line-height:27px; margin-left:13px;}
+        .pagenum{ width:38px; height:23px; border:1px solid #ccc; text-align:center; line-height:23px; margin-top:2px; margin-left:6px;}
+        .btn{ width:53px; height:25px; background:#D3D3D3; text-align:center; line-height:25px; margin-left:6px; padding: 0;}
+
+        .fenye{float: left; width: 100%;height: 40px;background: #00b274;margin-top: 20px;margin-bottom: 20px;}
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/less.min.js"></script>
+    <script src="js/myplugins.js"></script>
+    <script src="js/index-html5.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/jquery.pagination.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div id="wrap">
+    <aside id="index-aside-l">
+        <nav>
+            <ul id="nav-top">
+                <li class="on active"><i class="icon-home"></i></li>
+                <li><i class="icon-tasks"></i></li>
+                <li><i class="icon-edit"></i></li>
+                <li><i class="icon-book"></i></li>
+                <li><i class="icon-envelope"></i></li>
+                
+                <li style="margin-top: 68px;"><i class="icon-coffee"></i></li>
+                <li><i class="icon-link"></i></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="main-wrap">
+        <main class="animated" id="index-home">
+            <article>
+                <header>Profile - About Me</header>
+                <section class="profile">
+                    <aside class="profile-l">
+                        <h4>REN GANG</h4>
+                        <div class="detail">
+                            <div>
+                                <p class="title"><i class="icon-user"></i>姓名</p>
+                                <p>任刚</p>
+                            </div>
+                            <div>
+                                <p class="title"><i class="icon-calendar"></i>出生年月</p>
+                                <p>1988/11</p>
+                            </div>
+                            <div>
+                                <p class="title"><i class="icon-map-marker"></i>地址</p>
+                                <p>北京市昌平区</p>
+                            </div>
+                            <div>
+                                <p class="title"><i class="icon-envelope-alt"></i>邮箱</p>
+                                <p>924892426@qq.com</p>
+                            </div>
+                            <div>
+                                <p class="title"><i class="icon-mobile-phone"></i>电话</p>
+                                <p>18201502425</p>
+                            </div>
+                            <div class="last">
+                                <p class="title"><i class="icon-globe"></i>主页</p>
+                                <p>www.github.com/hoyuet</p>
+                            </div>
+                        </div>                       
+                        <section>
+                            <i class="icon-quote-left"></i>
+                           谁终将声震人间，必长久深自缄默；谁终将点燃闪电，必长久如云漂泊。没有电话，没有问候，没有按时赴约。你太忙，我明白。如果有一天我不爱你了，就轮到你明白了。每天告诉自己：再难也要坚持。再好也要淡泊。再差也要自信。再多也要节省。再冷也要热情。
+                        </section>
+                    </aside>
+                    <aside class="profile-r">
+                        <img src="images/img-profile/about_1.png" alt="">
+                    </aside>
+                </section>
+                <section  class="clearfix">
+                    <h3><img style="width: 50px;height: 50px;" src="images/skills/Web-Development-icon.png" alt="" />职业技能</h3>
+                    <figure class="skill">
+                        <img src="images/skills/html.png" alt="" title="HTML" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/css2.png" alt="" title="CSS" />
+                    </figure>
+                     <figure class="skill">
+                        <img src="images/skills/js.png" alt="" title="js" />
+                    </figure>
+                     <figure class="skill">
+                        <img src="images/skills/jquery.png" alt="" title="jQuery" />
+                    </figure>
+                     <figure class="skill">
+                        <img src="images/skills/H5.png" alt="" title="HTML5" />
+                    </figure>         
+                    <figure class="skill">
+                        <img src="images/skills/bs.png" alt="" title="bootstrap" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/jquery-mobile.png" alt="" title="jQuery-mobile" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/angularjs.png" alt="" title="AngularJs" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/nodejs.jpg" alt="" title="nodeJs" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/react.png" alt="" title="reactJs" />
+                    </figure>
+                    <figure class="skill">
+                        <img src="images/skills/ps.png" alt="" title="Ps" />
+                    </figure>
+                </section>
+                <section class="accordion">
+                    <h3><img style="width: 50px;height: 50px;" src="images/skills/works-icon.png" alt="" />工作&项目</h3>
+                    <div>
+                        <span>北京网酒网电子商务有限公司 <i class="icon-chevron-up right"></i></span>
+                        <p class="on">
+                          在网酒网，我的职位是网页制作工程师，主要负责静态网页和动态网页效果的开发，负责每月的专题活动页面，中秋节，双十一专题页面的开发，将原官网中的flash效果，用js技术实现并替换，与后台用ajax交互，在工作中用到的技术有html，css，JavaScript，jQuery，svn,less
+                        </p>
+                    </div>
+                    <div>
+                        <span>北京怡和嘉业科技有限公司 <i class="icon-chevron-down right"></i></span>
+                        <p>
+                            主要从事官网英文网站的开发和维护工作，包括官网首页，产品介绍页，服务支持页，关于等页面的开发和维护，各类活动专题的制作上线工作；与美工和后台人员合作共同完成页面的开发和维护工作，其他临时工作任务参与的项目，与后台人员交流并用ajax完成页面交互，用到的技术有html，css，bootstrap，JavaScript，jQuery   。这份前端工作经历，培养了我的细致和耐心，体会到团队合作意识很重要，提升了沟通表达能力，自己的美感和工作效率有了很大的提高。 
+                        </p>
+                    </div>
+                    <div>
+                        <span>北京公交查询系统 <i class="icon-chevron-down right"></i></span>
+                        <p>
+							在公交查询系统项目中，主要负责乘客意见，满意度，满意率模块开发，表格汇总,图形展示，用到的技术：html，css，less,JavaScript，bootstrap响应式布局和组件，jQuery , echarts插件                        
+                        </p>
+                    </div>
+                </section>                                                                    
+            </article>
+        </main>
+        <main class="animated" id="index-tasks" >
+            <article>
+                <header>Projects And Effects</header>
+                <section id="effects" style='background: #999999;'>
+                    <h4>我的效果集<a href="#">more</a></h4>                  
+                    <ul id="hexGrid">
+                    	<li class="hex">
+							<a class="hexIn" href="views/effects/images-grid/index.html">
+								<img src="views/effects/images-grid/images/photos.png" alt="" />
+								<h1>图片查看效果</h1>
+								<p>一个小型的图片查看器，仿美图看看</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/分块幻灯片/index.html">
+								<img src="views/effects/分块幻灯片/img/fk.png" alt="" />
+								<h1>分块幻灯片</h1>
+								<p>这是一个分块幻灯片，动态展示图片效果</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/抽奖/index.html">
+								<img src="views/effects/抽奖/images/choujiang.png" alt="" />
+								<h1>抽奖效果</h1>
+								<p>随机抽取三个数，作为幸运号</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/查看全国店铺/index.html">
+								<img src="views/effects/查看全国店铺/img/dianpu.png" alt="" />
+								<h1>查看全国店铺</h1>
+								<p>在网酒网做的小效果，查看各省的详细店铺</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/mobile-desk/index.html">
+								<img src="views/effects/mobile-desk/mobile-desk.png" alt="" />
+								<h1>手机桌面效果</h1>
+								<p>将照片墙改版的手机桌面</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/Magnifier/index.html">
+								<img src="views/effects/Magnifier/magnifier.png" alt="" />
+								<h1>放大镜效果</h1>
+								<p>清晰真实的放大镜</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/商品三级联动/index.html">
+								<img src="views/effects/商品三级联动/shop.png" alt="" />
+								<h1>商品三级联动效果</h1>
+								<p>在公司做的三级联动效果</p>
+							</a>
+						</li>
+						<li class="hex">
+							<a class="hexIn" href="views/effects/photos-wall/index.html">
+								<img src="views/effects/photos-wall/images/photos-wall.png" alt="" />
+								<h1>照片墙</h1>
+								<p>用html5+css制作的简单照片墙</p>
+							</a>
+						</li>
+
+                    </ul>
+					<div class="fenye"></div>
+                </section>
+                <section class="clearfix" id="objects">
+                    <h4>我的项目集<a href="#">more</a></h4>
+                    <figure>
+                        <a href="views/webApp/双语小说/index.html"><img src="images/tasks/4.jpg" alt=""></a>
+                        <figcaption>HTML5双语小说</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/projects/PC端固定布局/index.html"><img src="images/tasks/6.jpg" alt=""></a>
+                        <figcaption>PC端固定布局</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/projects/sougou/sougou.html"><img src="images/tasks/8.jpg" alt=""></a>
+                        <figcaption>仿搜狗页面</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/projects/兼容响应式布局/index.html"><img src="images/tasks/9.jpg" alt=""></a>
+                        <figcaption>兼容响应式布局</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/projects/个人博客/index.html"><img src="images/tasks/10.jpg" alt=""></a>
+                        <figcaption>个人博客</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/projects/移动端流体布局/index.html"><img src="images/tasks/11.jpg" alt=""></a>
+                        <figcaption>移动端流体布局</figcaption>
+                    </figure>
+                    <div class="fenye"></div>
+                </section>
+                <section id="plugins">
+                    <h4>我的插件集<a href="#">more</a></h4>
+                    <figure>
+                        <a href="views/Plug-ins/border-plugin/border-plugin.html"><img src="images/tasks/12.jpg" alt=""></a>
+                        <figcaption>运动的边框-JQuery插件</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/Plug-ins/table-fixed-plugin/表头和侧边栏固定的表格(兼容iPad及以上设备).html"><img src="images/tasks/2.jpg" alt=""></a>
+                        <figcaption>表头和侧边栏固定的表格(兼容iPad及以上设备)</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/Plug-ins/carousel-plugin/demo轮播图插件.html"><img src="images/tasks/3.jpg" alt=""></a>
+                        <figcaption>轮播图插件</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="views/Plug-ins/waterFall-plugin/demo瀑布流插件.html"><img src="images/tasks/4.jpg" alt=""></a>
+                        <figcaption>瀑布流插件</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="#"><img src="images/tasks/5.jpg" alt=""></a>
+                        <figcaption>to be continued...</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="#"><img src="images/tasks/6.jpg" alt=""></a>
+                        <figcaption>to be continued...</figcaption>
+                    </figure>
+                    <div class="fenye"></div>
+                </section>
+            </article>
+        </main>
+        <main class="animated" id="index-edit">
+            <article>
+                <header>My Blog</header>
+                <section id="carouse">
+                    <div class="tabs">
+                        <ol>
+                            <li class="on">0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ol>
+                        <div class="tab-pane-wrap">
+                            <div class="tab-pane color0 animated on"></div>
+                            <div class="tab-pane color1 animated"></div>
+                            <div class="tab-pane color2 animated"></div>
+                            <div class="tab-pane color3 animated"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h4>BLOG POST GALLERY</h4>
+                    <div class="content">
+                        <a href="#">MORE>></a>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...
+                    </div>
+                    <div class="details">
+                        <span class="zan"><i class="icon-thumbs-up"></i>&nbsp;2</span>
+                        <span class="cai"><i class="icon-comment"></i>&nbsp;2</span>
+                        <time><i class="icon-time"></i>&nbsp;2016/12/25</time>
+                    </div>
+                </section>
+                <section>
+                    <h4>BLOG POST GALLERY</h4>
+                    <div class="content">
+                        <a href="#">MORE>></a>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...
+                    </div>
+                    <div class="details">
+                        <span class="zan"><i class="icon-thumbs-up"></i>&nbsp;2</span>
+                        <span class="cai"><i class="icon-comment"></i>&nbsp;2</span>
+                        <time><i class="icon-time"></i>&nbsp;2016/12/25</time>
+                    </div>
+                </section>
+                <section>
+                    <h4>BLOG POST GALLERY</h4>
+                    <div class="content">
+                        <a href="#">MORE>></a>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...
+                    </div>
+                    <div class="details">
+                        <span class="zan"><i class="icon-thumbs-up"></i>&nbsp;2</span>
+                        <span class="cai"><i class="icon-comment"></i>&nbsp;2</span>
+                        <time><i class="icon-time"></i>&nbsp;2016/12/25</time>
+                    </div>
+                </section>
+                <section>
+                    <h4>BLOG POST GALLERY</h4>
+                    <div class="content">
+                        <a href="#">MORE>></a>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...
+                    </div>
+                    <div class="details">
+                        <span class="zan"><i class="icon-thumbs-up"></i>&nbsp;2</span>
+                        <span class="cai"><i class="icon-comment"></i>&nbsp;2</span>
+                        <time><i class="icon-time"></i>&nbsp;2016/12/25</time>
+                    </div>
+                </section>
+                <section>
+                    <h4>BLOG POST GALLERY</h4>
+                    <div class="content">
+                        <a href="#">MORE>></a>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...
+                    </div>
+                    <div class="details">
+                        <span class="zan"><i class="icon-thumbs-up"></i>&nbsp;2</span>
+                        <span class="cai"><i class="icon-comment"></i>&nbsp;2</span>
+                        <time><i class="icon-time"></i>&nbsp;2016/12/25</time>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <main class="animated" id="index-book">
+            <article>
+                <header>Reading Book</header>
+                <section>
+                	<h4><a href="github.com/hoyuet/books"><button>more</button></a></h4>
+                    <div>
+                    	<img src="images/book/ang1.png"/>
+                        <span><a href="book/AngularJS开发秘籍.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/js1.png"/>
+                        <span><a href="book/JavaScript+DOM编程艺术.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/xys.png"/>
+                        <span><a href="book/响应式WEB设计：HTML5和CSS3实践指南.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/backbone.png"/>
+                        <span><a href="book/Backbone.js实战 [陶国荣著][机械工业出版社][2014.04][223页]jb51.net.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/node.png"/>
+                        <span><a href="book/Node.js高级编程.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/bts.png"/>
+                        <span><a href="book/深入理解bootstrap【高清扫描版】.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/js2.png"/>
+                        <span><a href="book/JavaScript权威指南—ECMAScript5+HTML5DOM+HTML5BOM (张亚飞) 高清PDF扫描版.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/es6.png"/>
+                        <span><a href="book/ES6 学习.pdf"></a></span>
+                    </div>
+                    <div>
+                    	<img src="images/book/react.png"/>
+                        <span><a href="book/REACT：引领未来的用户界面开发框架.pdf"></a></span>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <main class="animated" id="index-envelope">
+            <article>
+                <header>Contact - Contact Me</header>
+                <section class="pagation">
+                    <div class="pagation-content">
+                        
+                    </div>
+                    <div class="page-number">
+                        
+                    </div>
+                </section>
+                <section id="message">
+                    <h4>LET'S KEEP IN TOUCH</h4>
+                    <form action="#">
+                        <input type="text" name="name" placeholder="请输入你的名字">
+                        <textarea name="text" cols="30" rows="10" placeholder="请输入留言内容"></textarea>
+                        <input type="button" id="clear" value="CLEAR">
+                        <input type="button" id="send" value="SEND">
+                    </form>
+                </section>
+            </article>
+        </main>
+        <main class="animated" id="index-coffee">
+            <article>
+                <header>Relax</header>
+                <section>
+                    <form action="#">
+                        <button class="on">all</button>
+                        <button>相声</button>
+                        <button>小品</button>
+                        <button>电影</button>                        
+                    </form>
+                    <div>
+                    	<a href="http://v.youku.com/v_show/id_XMTkxNTA0NTMy.html" class="dy"><img src="images/img-coffee/000.jpg"/><span>假如爱有天意</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XODE0NTUzNTAw.html?" class="xs"><img src="images/img-coffee/0.jpg"/><span>青曲社相声</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XMTg1MjAyODIyNA==.html?" class="dy"><img src="images/img-coffee/222.jpg"/><span>独立日</span></a>
+                    	                    	
+                    	<a href="http://v.youku.com/v_show/id_XMzUyMjcxMzgw.html?" class="xp"><img src="images/img-coffee/00.jpg"/><span>冯巩小品</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XNjIyMDc4MTY4.html?" class="dy"><img src="images/img-coffee/111.jpg"/><span>惊天魔盗团</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XMjUyOTczNTk4NA==.html?" class="xp"><img src="images/img-coffee/11.jpg"/><span>开心麻花小品</span></a>
+                    	                    	
+                    	<a href="http://v.youku.com/v_show/id_XOTMwMjg4NDU2.html" class="xs"><img src="images/img-coffee/1.jpg"/><span>青曲社相声</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XMTgyMjcxMzc5Mg==.html?" class="xp"><img src="images/img-coffee/22.jpg"/><span>开心麻花小品</span></a>
+                    	<a href="http://v.youku.com/v_show/id_XMjQ5MTE4NjQ0NA==.html" class="xs"><img src="images/img-coffee/2.jpg"/><span>青曲社相声</span></a>
+                    	
+                    </div>                  
+                </section>
+            </article>
+        </main>
+        <main class="animated" id="index-link">
+            <article>
+                <header>Link</header>
+                <section>
+                    <ul>
+                        <li><a href="http://javascript.ruanyifeng.com/">Javascript标准参考教程</a></li>
+                        <li><a href="http://www.jquery123.com/">jQuery API中文文档</a></li>
+                        <li><a href="http://www.html5cn.com.cn/">Html5中文网</a></li>
+                        <li><a href="http://www.requirejs.cn/">Requirjs中文网</a></li>
+                        <li><a href="http://yslove.net/seajs/">Seajs文档</a></li>
+                        <li><a href="http://ourjs.com/detail/529ca5950cb6498814000005">全面的Nodejs教程</a></li>
+                        <li><a href="http://www.angularjs.cn/">Angularjs中文社区</a></li>
+                        <li><a href="http://www.vue-js.com/">Vuejs专业中文社区</a></li>
+                        <li><a href="http://www.bootcss.com/">Bootstrap中文教程</a></li>
+                        <li><a href="http://www.htmleaf.com/">jQuery之家</a></li>
+                        <li><a href="http://caibaojian.com/">前端开发博客</a></li>
+                        <li><a href="http://www.w3cplus.com/">W3cplus</a></li>
+                        <li><a href="http://imweb.io/">腾讯IMWEB前端社区</a></li>
+                        <li><a href="http://www.runoob.com/">菜鸟教程</a></li>
+                        <li><a href="http://www.zhangxinxu.com/">张鑫旭博客</a></li>
+                        <li><a href="http://www.jb51.net/">脚本之家</a></li>
+                        <li><a href="http://www.cnblogs.com/">博客园</a></li>
+                        <li><a href="http://www.dowebok.com/98.html">Css3动画库</a></li>
+                        <li><a href="http://github.com/hoyuet/examples">前端代码实例集合</a></li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+   	
+    </div>
+    <aside id="index-aside-r">
+        <figure>
+            <img src="images/img/front.jpg" alt="">
+        </figure>
+        <div class="about">
+            <p class="name">任刚 <a style="color: #B79C33;" href="javascript:;" id="go-index-home"><sup>more</sup></a></p>
+            <p class="position">WEB前端开发工程师</p>
+            <address><i class="icon-map-marker"></i> 北京市昌平区</address>
+        </div>
+        <div class="motto">
+            If our thoughts falter, we will not see the real world。<p>——Buddhist term</p>
+        </div>
+        <div class="search">
+            <input type="button" value="搜索" class="btn" style="font-weight: bold;color:black;">
+            <input type="text" class="inp">
+        </div>
+        <div class="contact">
+            <p>联系我</p>
+            <ul>
+                <li><a href="https://github.com/hoyuet"><i class="icon-github"></i></a></li>
+                <!--<li><a href="#"><i class="icon-"></i></a></li>-->
+                <li><a href="http://weibo.com/u/5905911181?refer_flag=1001030201_"><i class="icon-weibo"></i></a></li>
+                <li><a href="mailto:2015760989@qq.com"><i class="icon-envelope-alt"></i></a></li>
+                <li><a href="http://www.cnblogs.com/reaf"><i class="icon-rss"></i></a></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+<div id="version">
+    其它
+    <div>
+        <p><a href="#">HTML5</a></p>
+        <p><a href="#">AngularJS</a></p>
+        <p><a href="#">Vuejs</a></p>
+        <p><a href="#">jQuery-UI</a></p>
+    </div>
+</div>
+<div id="set">
+    <span class="icon"><i class="icon-gears"></i></span>
+    <form action="#">
+    
+    		<h2><legend>设置:</legend></h2>  	
+	    	<h4>背景</h4>
+	    	<div>
+	    		<span style="background:#3B5998 ;"></span>
+	    		<span style="background:#008000;"></span>
+	    		<span style="background:#985F0D ;"></span>
+	    		<span style="background:#A94442 ;"></span>
+	    		<span style="background:#C7254E ;"></span>
+	    		<span style="background:#F4B000 ;"></span>
+	    	</div>
+	    	<h4>主题</h4>
+	    	<div>
+	    		<span class="index-html5-bg1"></span>
+	    		<span class="index-html5-bg2"></span>
+	    		<span class="index-html5-bg3"></span>
+	    		<span class="index-html5-bg4"></span>
+	    		<span class="index-html5-bg5"></span>
+	    		<span class="index-html5-bg6"></span>
+	    	</div>
+	    	<h4>其他版本</h4>	
+	    	<div><input type="radio" name="version"/>angular</div>
+	    	<div><input type="radio" name="version"/>jquery-mobile</div>
+	    	<div><input type="radio" name="version"/>ext</div>
+	    	<div><input type="radio" name="version"/>vue</div>
+	    	<div><input type="radio" checked="checked" name="version"/>html5</div>
+	    	<h4>animate</h4>
+	    	<select name="" style="display: block;">
+	    		<option value="">animate</option>
+	    		<option value="">animate</option>
+	    		<option value="">animate</option>
+	    		<option value="">animate</option>
+	    		<option value="">animate</option>
+	    		<option value="">animate</option>
+	    	</select>
+	    	<div style="text-align: center;margin-top: 20px;"><input type="reset" value="reset" style="width: 60px;height: 30px;"/></div>
+	    	
+  
+    	
+    </form>
+</div>
+
+</body>
+</html>
+
