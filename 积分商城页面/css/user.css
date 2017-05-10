@@ -1,0 +1,386 @@
+html {
+  font-family: "微软雅黑";
+  background: #f1f1f1;
+}
+.color1 {
+  background: #122B40;
+}
+.color2 {
+  background: #D0E9C6;
+}
+.color3 {
+  background: #AFD9EE;
+}
+.color4 {
+  background: #D43F3A;
+}
+.color5 {
+  background: #ADADAD;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+div {
+  box-sizing: border-box;
+}
+.container-index {
+  width: 100%;
+  height: 12.8rem;
+  padding-top: 0.96rem;
+  background: #fff;
+}
+.container-index header#header {
+  width: 100%;
+  height: 0.96rem;
+  background: #be504f;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+.container-index header#header p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.27rem;
+  font-family: "微软雅黑";
+  line-height: 0.96rem;
+  text-align: center;
+  color: #fff;
+}
+.container-index header#header p.back {
+  width: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.2rem;
+  text-align: right;
+}
+.container-index #main {
+  width: 100%;
+  height: auto;
+  background: #dcdddd;
+}
+.container-index #main .user-info {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.05rem;
+  background: #ffffff url(../image/user/user.png) 0 0 no-repeat;
+  background-size: 100% 2rem;
+}
+.container-index #main .user-info .wrap_ptimg {
+  width: 0.98rem;
+  height: 0.98rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0.05rem;
+  margin-left: -0.49rem;
+  background-size: 0.98rem 0.98rem;
+}
+.container-index #main .user-info #upload-file {
+  width: 1.4rem;
+  height: 0.3rem;
+  background: #ccc;
+  opacity: 0;
+  border-radius: 0.1rem;
+  position: absolute;
+  left: 50%;
+  bottom: -0.14rem;
+  margin-left: -0.7rem;
+  z-index: 10;
+}
+.container-index #main .user-info P {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  color: #fff;
+}
+.container-index #main .user-info P.upload {
+  bottom: 0.88rem;
+  font-size: 0.16rem;
+}
+.container-index #main .user-info P.upload span {
+  display: inline-block;
+  /*width: 0.88rem;*/
+ padding: 0 0.1rem;
+  height: 0.3rem;
+  background: #898989;
+  border-radius: 0.1rem;
+}
+.container-index #main .user-info P.user-name {
+  bottom: 0.48rem;
+  font-size: 0.24rem;
+}
+.container-index #main .user-info P.user-grade {
+  bottom: 0.22rem;
+  font-size: 0.2rem;
+}
+.container-index #main .user-address {
+  width: 100%;
+  height: 1.9rem;
+  line-height: 0.6rem;
+}
+.container-index #main .user-address .title {
+  width: 100%;
+  height: 0.6rem;
+  margin-bottom: 1px;
+  background: #fff;
+}
+.container-index #main .user-address .title p {
+  width: 50%;
+  height: 100%;
+  line-height: 0.6rem;
+  font-size: 0.24rem;
+  color: #000;
+  padding-left: 0.22rem;
+  float: left;
+}
+.container-index #main .user-address .title a {
+  display: inline-block;
+  /*width: 0.8rem;*/
+  float: right;
+  padding-right: 0.26rem;
+  font-size: 0.2rem;
+  color: #898989;
+}
+.container-index #main .user-address .user-address-detail {
+  width: 100%;
+  height: 1.3rem;
+  background: #fff;
+}
+.container-index #main .user-address .user-address-detail p {
+  width: 5.3rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  float: left;
+  font-size: 0.24rem;
+  padding-left: 0.7rem;
+}
+.container-index #main .user-address .user-address-detail p.p0 {
+  padding-top: 0.26rem;
+}
+.container-index #main .user-address .user-address-detail p.p0 span {
+  display: inline-block;
+}
+.container-index #main .user-address .user-address-detail p.p0 span.mobile {
+  /*width: 1.5rem;*/
+ padding-right: 0.1rem;
+  height: 0.3rem;
+  margin-left: 0.85rem;
+}
+.container-index #main .user-address .user-address-detail p.p0 span.state {
+  /*width: 0.6rem;*/
+  padding: 0rem 0.1rem;
+  text-align: center;
+  font-size: 0.15rem;
+  height: 0.24rem;
+  vertical-align: middle;
+  line-height: 0.24rem;
+  border-radius: 0.1rem;
+  background: #898989;
+  color: #fff;
+}
+.container-index #main .user-address .user-address-detail p.p1 {
+  padding-top: 0.14rem;
+  color: #898989;
+}
+.container-index #main .user-address .user-address-detail a {
+  display: inline-block;
+  width: 0.36rem;
+  height: 0.36rem;
+  float: right;
+  background: url(../image/收货地址-编辑.png) 0 0 no-repeat;
+  background-size: 0.34rem 0.33rem;
+  margin-right: 0.3rem;
+}
+.container-index #main .user-address .user-address-add {
+  width: 100%;
+  height: 0.58rem;
+  background: #ed5253;
+  text-align: center;
+  float: left;
+}
+.container-index #main .user-address .user-address-add a {
+  display: inline-block;
+  width: 1.65rem;
+  height: 100%;
+  text-align: right;
+  line-height: 0.58rem;
+  font-size: 0.27rem;
+  color: #fff;
+  background: url(../image/user/add_address.png) 0 0.14rem no-repeat;
+  background-size: 0.28rem 0.28rem;
+}
+.container-index #main .user-order {
+  width: 100%;
+  height: 3.28rem;
+  float: left;
+  border-top: 0.06rem solid #F1F1F1;
+}
+.container-index #main .user-order .user-order-title {
+  width: 100%;
+  height: 0.68rem;
+  background: #FFF;
+  margin-bottom: 1px;
+  line-height: 0.68rem;
+  font-size: 0.24rem;
+  color: #000;
+  padding: 0 0.24rem;
+  border-bottom: 1px solid #F1F1F1;
+}
+.container-index #main .user-order .user-order-title a {
+  font-size: 0.2rem;
+  color: #898989;
+  display: inline-block;
+  float: right;
+}
+.container-index #main .user-order .user-order-content {
+  width: 100%;
+  height: auto;
+}
+.container-index #main .user-order .user-order-content .user-order-detail {
+  width: 100%;
+  height: 0.62rem;
+  line-height: 0.62rem;
+  background: #fff;
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 0.2rem;
+  color: #000;
+  padding: 0 0.28rem;
+}
+.container-index #main .user-order .user-order-content .user-order-detail .order-state {
+  display: inline-block;
+  float: right;
+  color: #898989;
+}
+.container-index #main .user-order .user-order-content .user-order-list {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul li {
+  float: left;
+  width: 100%;
+  height: auto;
+  min-height: 1.4rem;
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 0.2rem;
+  color: #000;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul li .img-wrap {
+  width: 1.8rem;
+  height: 100%;
+  text-align: center;
+  float: left;
+  margin-top: 0.1rem;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul li .img-wrap img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul li .img-detail {
+  /*width: 4rem;*/
+  height: 100%;
+  line-height: 1.4rem;
+  float: left;
+ text-align: left;
+}
+.container-index #main .user-order .user-order-content .user-order-list ul li .score {
+	/*width: auto;*/
+  /*max-width: 1.4rem;*/
+  height: 100%;
+  line-height: 1.4rem;
+  float: right;
+  padding-right: 0.32rem;
+}
+.container-index #main .user-order .user-order-content .user-order-total {
+  width: 100%;
+  height: 0.54rem;
+  background: #fff;
+  padding: 0 0.28rem;
+  border-bottom: 1px solid #F1F1F1;
+}
+.container-index #main .user-order .user-order-content .user-order-total p {
+  font-size: 0.2rem;
+  color: #000;
+  height: 100%;
+  line-height: 0.54rem;
+}
+.container-index #main .user-order .user-order-content .user-order-total p.goods {
+	width: auto;
+  max-width: 1.29rem;
+  float: left;
+}
+.container-index #main .user-order .user-order-content .user-order-total p.score {
+	width: auto;
+  padding-left: 0.2rem;
+  float: left;
+  text-align: left;
+}
+.container-index #main .user-order .user-order-content .user-order-total p.detail {
+  width: 1.3rem;
+  float: right;
+  text-align: right;
+}
+.container-index #main .user-order .user-order-content .user-order-total p.detail a {
+  display: inline-block;
+  text-align: center;
+  padding: 0 0.07rem;
+}
+.container-index #main .user-activities {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-top: 0.06rem solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+}
+.container-index #main .user-activities .user-activities-title {
+  width: 100%;
+  height: 0.66rem;
+  line-height: 0.8rem;
+  background: #fff;
+  color: #000;
+  font-size: 0.24rem;
+  padding-left: 0.22rem;
+  margin-bottom: 1px;
+}
+.container-index #main .user-activities .user-activities-content {
+  width: 100%;
+  height: 1.5rem;
+  background: #ffffff url(../image/user/activities.png) 0 0 no-repeat;
+  margin-bottom: 0.06rem;
+  background-size: 7.2rem 1.49rem;
+}
+.container-index #main .user-activities .user-activities-content ul {
+  width: 100%;
+  height: 100%;
+}
+.container-index #main .user-activities .user-activities-content ul li {
+  width: 1.1rem;
+  height: 100%;
+  float: left;
+  margin: 0 0.33rem;
+}
+.container-index #main .user-activities .user-activities-content ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>购物车</title>
+		<link rel="stylesheet" href="/积分商城页面/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/boost.min.css"/>
+		<!--<link rel="stylesheet/less" type="text/css" href="/积分商城页面/css/cart.less"/>-->
+		<link rel="stylesheet" href="/积分商城页面/css/cart.css" />
+		<link rel="stylesheet" type="text/css" href="/积分商城页面/css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="container-index clearfix">
+			<!--首页标题-->
+			<header id="header">
+				<p class="title">购物车</p>
+				<p class="back"><a href="/积分商城页面/views/index/">返回</a></p>
+			</header>
+			<!--main-->
+			<div id="main">
+				<ul class="cart-content blend-checkbox-red" data-blend-widget="checkbox" data-blend-checkbox='{"type":"group"}'>
+					<li class="cart-list">
+						<div class="checkbox">
+							<span class="blend-checkbox blend-checkbox-default blend-checkbox-checked"></span>
+						</div>
+						<div class="cart-list-item">
+							<div class="item-img">
+								<img src="../../image/index/首页切图_05.png"/>
+							</div>
+							<div class="other">
+								<p class="title">香飘飘 巧克力口味30杯礼盒装</p>
+								<p class="score">积分: <span>50000</span></p>
+								<p class="count"><button class="sub">-</button><input type="text" value="1" /><button class="add">+</button></p>
+							</div>
+						</div>
+					</li>
+					<li class="cart-list">
+						<div class="checkbox">
+							<span class="blend-checkbox blend-checkbox-default blend-checkbox-checked"></span>
+						</div>
+						<div class="cart-list-item">
+							<div class="item-img">
+								<img src="../../image/index/首页切图_05.png"/>
+							</div>
+							<div class="other">
+								<p class="title">香飘飘 巧克力口味30杯礼盒装</p>
+								<p class="score">积分: <span>50000</span></p>
+								<p class="count"><button class="sub">-</button><input type="text" value="1" /><button class="add">+</button></p>
+							</div>
+						</div>
+					</li>
+					<li class="cart-list">
+						<div class="checkbox">
+							<span class="blend-checkbox blend-checkbox-default blend-checkbox-checked"></span>
+						</div>
+						<div class="cart-list-item">
+							<div class="item-img">
+								<img src="../../image/index/首页切图_05.png"/>
+							</div>
+							<div class="other">
+								<p class="title">香飘飘 巧克力口味30杯礼盒装</p>
+								<p class="score">积分: <span>50000</span></p>
+								<p class="count"><button class="sub">-</button><input type="text" value="1" /><button class="add">+</button></p>
+							</div>
+						</div>
+					</li>
+					<li class="total">
+						<div class="checkbox">
+							<span class="blend-checkbox blend-checkbox-square blend-checkbox-all"></span>
+						</div>
+						<div class="total-content">
+							<p class="all">全选</p>
+							<p class="score">合计：5000 <span>积分</span></p>
+							<p class="settlement" id="dom-dialog-btn">去结算 <span>(<i>1</i>)</span></p>
+						</div>
+					</li>
+				</ul>
+				<div class="guess-like">
+					<div class="header clearfix">
+						<span class="title">猜你喜欢</span>						
+					</div>
+					<ul class="guess-like-content clearfix">
+						<li class="first">
+							<p class="img-wrap"><img src="../../image/cart/购物车（无货）_03.png"/></p>
+							<p class="title1">麦尓思顿 </p>
+							<p class="title2">精品咖啡糖条（12支）</p>
+							<p class="score">积分:<span>3500</span></p>
+							<a href="#" class="link"></a>
+						</li>
+						<li class="first">
+							<p class="img-wrap"><img src="../../image/cart/购物车（无货）_03.png"/></p>
+							<p class="title1">麦尓思顿 </p>
+							<p class="title2">精品咖啡糖条（12支）</p>
+							<p class="score">积分:<span>3500</span></p>
+							<a href="#" class="link"></a>
+						</li>
+						<li class="first">
+							<p class="img-wrap"><img src="../../image/cart/购物车（无货）_03.png"/></p>
+							<p class="title1">麦尓思顿 </p>
+							<p class="title2">精品咖啡糖条（12支）</p>
+							<p class="score">积分:<span>3500</span></p>
+							<a href="#" class="link"></a>
+						</li>
+				
+					</ul>
+					
+				</div>			
+			</div>
+			<div class="cart-mask">
+				
+			</div>
+			<div class="cart-popover">
+				<p class="title">您是否确定支付相应积分来完成本次交易 ？</p>
+				<p class="quantity">购买商品数量： <span>1</span>件</p>
+				<p class="score-total">总积分： <span>5000</span>分</p>
+				<p class="score-discount">会员折扣： 享受<span>10</span>%优惠</p>
+				<p class="score-current">应付积分：<span>4920</span>分</p>
+				<p class="blank"></p>
+				<p class="pay"><button class="ok">确认支付</button><button class="cancel">取消支付</button></p>
+			</div>
+			<!--<div  id="domDialog" class="blend-dialog">
+			    <div class="blend-dialog-header">
+			        这是提示弹框的title
+			    </div>
+			    <div class="blend-dialog-body">
+			        这是提示弹框，这里是内容
+			    </div>
+			    <div class="blend-dialog-footer">
+			        <a href="javascript:void(0);" class="blend-dialog-confirm">确认</a>
+			        <a href="javascript:void(0);" class="blend-dialog-cancel">取消</a>
+			    </div>
+			</div>-->
+			
+		</div>
+		
+		
+		<script src="/积分商城页面/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/boost.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+	</body>
+</html>

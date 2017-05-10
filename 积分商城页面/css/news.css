@@ -1,0 +1,115 @@
+html {
+  font-family: "微软雅黑";
+}
+.color1 {
+  background: #122B40;
+}
+.color2 {
+  background: #D0E9C6;
+}
+.color3 {
+  background: #AFD9EE;
+}
+.color4 {
+  background: #D43F3A;
+}
+.color5 {
+  background: #ADADAD;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+div {
+  box-sizing: border-box;
+}
+.container-index {
+  width: 100%;
+  height: 12.8rem;
+  padding-top: 0.96rem;
+  background: #fafafa;
+}
+.container-index header#header {
+  width: 100%;
+  height: 0.96rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  border-bottom: 1px solid #f1f1f1;
+}
+.container-index header#header p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.27rem;
+  font-family: "微软雅黑";
+  line-height: 0.96rem;
+  text-align: center;
+  color: #000;
+}
+.container-index header#header p.back {
+  width: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container-index header#header p.back a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.2rem;
+  text-align: right;
+  color: #595757;
+  background: url(../image/back-1.png) 0.2rem center no-repeat;
+  background-size: 0.12rem 0.18rem;
+}
+.container-index #main {
+  width: 100%;
+  height: auto;
+}
+.container-index #main .news-content {
+  width: 100%;
+  height: auto;
+}
+.container-index #main .news-content ul {
+  width: 100%;
+  height: auto;
+}
+.container-index #main .news-content ul li {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 1.12rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 0.2rem;
+  line-height: 0.38rem;
+  padding-left: 1.1rem;
+  padding-top: 0.25rem;
+}
+.container-index #main .news-content ul li span {
+  display: inline-block;
+  width: 4.7rem;
+  height: 100%;
+}
+.container-index #main .news-content ul li time {
+  display: inline-block;
+  height: 100%;
+  float: right;
+}
+.container-index #main .news-content ul li.read {
+  background: url(../image/read.png) 0.2rem 0.06rem no-repeat;
+  background-size: 0.68rem 0.83rem;
+}
+.container-index #main .news-content ul li.unread {
+  background: url(../image/unread.png) 0.2rem 0.34rem no-repeat;
+  background-size: 0.69rem 0.50rem;
+}

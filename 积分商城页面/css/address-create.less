@@ -1,0 +1,45 @@
+html{font-family: "微软雅黑";}
+.color1{background: #122B40;}
+.color2{background: #D0E9C6;}
+.color3{background: #AFD9EE;}
+.color4{background: #D43F3A;}
+.color5{background: #ADADAD;}
+.clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
+.clearfix{*zoom:1;}
+div{box-sizing: border-box;}
+.container-index{
+    width: 100%;height:1280px;background: #fff;padding-top: 96px;padding-bottom: 96px;
+    header#header{
+        width: 100%;height: 96px;background: #fff;position: fixed;left: 0;top: 0;z-index: 99999;color: #000;
+        p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;
+            &.tips{width:92px;position: absolute;right:0;top:0;font-size: 40px;line-height: 76px;}
+            &.back{width:90px;position: absolute;left:0;top:0;font-size: 20px;text-align: right;color: #595757;}
+        }
+        
+        
+    }
+    #main{
+        width: 100%;height: auto;background: #f1f1f1;border-bottom: 1px solid #F1F1F1;border-top: 1px solid #F1F1F1;
+        ul{
+            width: 100%;height: auto;
+            li{box-sizing: border-box;
+                width: 100%;height: 118px;line-height: 118px;color: #000;background: #fff;margin-top: 1px;font-size: 24px;padding-left: 48px;
+                input{
+                    display: inline-block;border: none;width: 500px;
+                }
+                a{position: relative;overflow: hidden;
+                    display: inline-block;width: 70px;height: 40px;float: right;margin-right: 110px;margin-top: 40px;border-radius: 20px;border: 1px solid #898788;
+                    span.switch{z-index:2;position:absolute;left: -1px;top: 0; display: inline-block;width: 40px;height: 40px;border-radius: 50%;border: 1px solid #898788;box-sizing: border-box;background: #fff;}
+                    i.switch1{display: inline-block;position: absolute;left: 0;top: 0;background: red;opacity: 0;z-index: 1;width: 100%;height:100% ;}
+                }
+            }
+        }
+        .address-save{
+            display: inline-block; width: 100%;height: 88px;line-height: 88px;text-align: center; background: #ed5253;font-size: 27px;color: #f4f4f4;position: fixed;left: 0;bottom: 0;
+            z-index: 10;
+        }
+        
+    }
+    
+    
+}

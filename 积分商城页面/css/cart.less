@@ -1,0 +1,181 @@
+html{font-family: "微软雅黑";background: #f1f1f1;}
+.color1{background: #122B40;}
+.color2{background: #D0E9C6;}
+.color3{background: #AFD9EE;}
+.color4{background: #D43F3A;}
+.color5{background: #ADADAD;}
+.clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
+.clearfix{*zoom:1;}
+.link{display: inline-block;width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.blend-checkbox{position: initial;}
+.blend-checkbox-red .blend-checkbox-checked{
+    background: url(../image/cart/checked.png) -1px -1px no-repeat;background-size: 42px 42px;
+}
+div{box-sizing: border-box;}
+.container-index{
+    width: 100%;height: auto;min-height:1280px;background:#fff;padding-top: 96px;
+    header#header{
+        width: 100%;height: 96px;background: #fff;position: fixed;left: 0;top: 0;z-index: 99999;
+        p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;color: #000;
+            &.back{
+                width:90px;position: absolute;left:0;top:0;
+                a{
+                    display: inline-block;width: 100%;height: 100%;font-size: 20px;text-align: right;color: #595757;
+                    background: url(../image/back-1.png) 20px center no-repeat;background-size: 12px 18px;
+                }
+            }
+        }
+        
+        
+    }
+    #main{
+        width: 100%;height: auto;background: #f1f1f1;border-top: 8px solid #F1F1F1;
+        .cart-content{
+            width: 100%;height: auto;background: #fff;border-bottom: 1px solid #c4c3c3;box-sizing: border-box;
+            .cart-tips{
+                width: 100%;height: 270px;text-align: center;
+                p{
+                    width: 100%;height: 156px;line-height: 156px;color: #221815;font-size: 24px;text-align: center;
+                }
+                a{
+                    display: inline-block; width: 158px;height:60px;line-height:60px;border-radius: 4px; color: #fff;font-size: 24px;background: #ed5253;text-align: center;
+                }
+            }
+            .cart-over-tips{
+                width: 100%;height:180px;
+                .p0{
+                    width: 670px;height: 44px;line-height: 44px;color: #221815;font-size: 24px;padding-left: 50px;padding-top: 46px;
+                }
+                .p1{
+                    width: 670px;height: 44px;line-height: 44px;color: #221815;font-size: 24px;padding-left: 50px;
+                }
+            }
+            .cart-list{
+                width: 696px;height: 232px;margin-left: 24px;border-bottom: 1px solid #f1f1f1;
+                .checkbox{
+                    width: 42px;height: 100%;float: left;line-height: 260px;text-align: center;
+                    span{
+                        width: 42px;height: 42px; border: 1px solid #000000;border-radius: 50%;
+                    }
+                }
+                .cart-list-item{
+                    width: 654px;height: 100%;float: left;
+                    .item-img{
+                        width: 290px;height: 100%;float: left;
+                        img{width: 100%;height: 100%;}
+                    }
+                    .other{
+                        width: 364px;height: 100%;float: left;
+                        p{
+                            float: left;
+                            &.title{width:220px;height: auto;font-size: 24px;color: #000;line-height: 44px;margin-top: 54px;}
+                            &.score{width: 180px;height: auto;font-size: 21px;color: #ed5253;margin-top: 24px;
+                                span{font-size: 30px;}
+                            }
+                            &.count{
+                                width:132px;height: 36px;font-size: 24px;text-align: center;line-height: 36px; box-sizing: border-box;
+                                border: 1px solid #c9caca;border-radius: 4px;overflow: hidden;margin-top: 24px;
+                                button{
+                                    width: 42px;height: 36px;line-height: 36px; border: none;
+                                    &.sub{float: left;}
+                                    &.add{float: right;}
+                                }
+                                input{width: 40px;height: 36px;border: none;float: left;text-align: center;}
+                            }
+                            &.go-exchange{
+                                width: 132px;height: 52px;margin-top: 18px;margin-left: 14px;
+                                button{
+                                    width: 100%;height: 100%;line-height: 52px;font-size: 20px;color: #fff;background: #ed5253;border-radius: 7px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .total{
+            width: 696px;height: 96px;background: #fff;margin-left: 24px;
+            .checkbox{
+                width: 42px;height: 100%;float: left;line-height: 90px;text-align: center;
+                span{
+                        width: 42px;height: 42px; border: 1px solid #000000;border-radius: 50%;
+                    }
+            }
+             .total-content{
+                width: 654px;height: 100%;float: left;
+                P{
+                    height: 100%;line-height: 96px;text-align: center;float: left;
+                    &.all{width: 80px;font-size: 20px;color: #221815;}
+                    &.score{
+                        width: 280px;font-size: 27px;color:#221815;
+                        span{font-size: 21px;}
+                    }
+                    &.settlement{
+                        width: 294px;font-size: 27px;color: #fff;background: #ed5253;
+                        span,i{
+                            font-size: 20px;
+                        }
+                    }
+                    &.cancel{
+                        width: 166px;font-size: 24px;color: #221815;
+                    }
+                }
+            }
+        }
+        .guess-like{
+            width: 100%;height:auto;-margin-top: 18px;float: left;background: #f1f1f1;
+            div.header{
+                 width: 100%;height:76px;line-height: 76px;background:url(../image/icon/guess.png) 25px 14px no-repeat;
+                 background-size: 54px 53px;
+                span{
+                    display: inline-block;height: 100%;line-height: 76px;
+                    width: 40%;float: left;font-size: 27px;padding-left: 100px;                  
+                }
+            }
+            .guess-like-content{
+                width: 100%;height: auto;background: #fff;
+                li{
+                    list-style: none;float: left;box-sizing: border-box; width:33.33%;height:auto；min-height: 240px;
+                    &.first{
+                        position: relative;
+                        .img-wrap{
+                            width: 166px;height: 110px;margin: 20px auto;
+                            img{width: 100%;height: 100%;}
+                        }
+                        
+                        .title1{font-size: 20px;color: #000;margin-left: 15px;}
+                        .title2{font-size: 20px;color: #000;margin-top: -7px;margin-left: 15px;}
+                        .score{
+                            font-size: 15px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: -2px;
+                            span{
+                                font-size: 24px;color: #ed5253;
+                            }
+                        }
+                    }                
+                }
+            }
+        }
+        
+    }
+    .cart-mask{
+        width: 100%;height: auto; min-height: 1280px;background: #4c4c4c;position: fixed;left: 0;top: 0;z-index: 100000;opacity: .8;      
+    }
+     .cart-popover{
+        width: 650px;height: 604px;margin: 0 auto;background: red;border-radius: 4px;z-index: 100001;overflow:hidden;position: fixed;left: 50%;top: 0;margin-top: 10px;margin-left: -325px;
+        p{
+            width: 100%;background: #fff;border-bottom: 1px solid #c4c3c3;font-size: 24px;line-height: 92px;text-align: center;
+            &.title,&.blank{height: 92px;line-height: 92px;}
+            &.quantity,&.score-total,&.score-discount,&.score-current{height: 84px;line-height: 84px;}
+            &.pay{
+                height: 88px;line-height: 88px;
+                button{
+                    display:inline-block;width: 50%;height:88px;text-align: center;line-height: 88px;border: none;font-size: 24px;color: #fff;
+                    &.ok{background: #ed5253;}
+                    &.cancel{background: #f89c00;}
+                }
+            }
+           
+        }
+    }
+}

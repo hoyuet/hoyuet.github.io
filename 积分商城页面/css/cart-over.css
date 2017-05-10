@@ -1,0 +1,305 @@
+html {
+  font-family: "微软雅黑";
+  background: #f1f1f1;
+}
+.color1 {
+  background: #122B40;
+}
+.color2 {
+  background: #D0E9C6;
+}
+.color3 {
+  background: #AFD9EE;
+}
+.color4 {
+  background: #D43F3A;
+}
+.color5 {
+  background: #ADADAD;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.container-index {
+  width: 100%;
+  height: 12.8rem;
+  background: #f1f1f1;
+  padding-top: 0.96rem;
+}
+.container-index header#header {
+  width: 100%;
+  height: 0.96rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+.container-index header#header p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.27rem;
+  font-family: "微软雅黑";
+  line-height: 0.96rem;
+  text-align: center;
+  color: #000;
+}
+.container-index header#header p.back {
+  width: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container-index header#header p.back a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 0.2rem;
+  text-align: right;
+  color: #595757;
+  background: url(../image/back-1.png) 0.2rem center no-repeat;
+  background-size: 0.12rem 0.18rem;
+}
+.container-index #main {
+  width: 100%;
+  height: auto;
+  margin-top: 0.08rem;
+}
+.container-index #main .cart-content {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+.container-index #main .cart-content .cart-tips {
+  width: 100%;
+  height: 2.7rem;
+  text-align: center;
+}
+.container-index #main .cart-content .cart-tips p {
+  width: 100%;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  color: #221815;
+  font-size: 0.24rem;
+  text-align: center;
+}
+.container-index #main .cart-content .cart-tips a {
+  display: inline-block;
+  width: 1.58rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-radius: 0.04rem;
+  color: #fff;
+  font-size: 0.24rem;
+  background: #ed5253;
+  text-align: center;
+}
+.container-index #main .cart-content .cart-over-tips {
+  width: 100%;
+  height: 1.8rem;
+}
+.container-index #main .cart-content .cart-over-tips .p0 {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  color: #221815;
+  font-size: 0.24rem;
+  padding-left: 0.5rem;
+  padding-top: 0.46rem;
+}
+.container-index #main .cart-content .cart-over-tips .p1 {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  color: #221815;
+  font-size: 0.24rem;
+  padding-left: 0.5rem;
+}
+.container-index #main .cart-content .cart-list {
+  width: 6.96rem;
+  height: 2.32rem;
+  margin-left: 0.24rem;
+  border-bottom: 0.02rem solid #f1f1f1;
+}
+.container-index #main .cart-content .cart-list .checkbox {
+  width: 0.42rem;
+  height: 100%;
+  float: left;
+  background: red;
+}
+.container-index #main .cart-content .cart-list .cart-list-item {
+  width: 6.54rem;
+  height: 100%;
+  background: #1B6D85;
+  float: left;
+}
+.container-index #main .total {
+  width: 6.96rem;
+  height: 0.96rem;
+  background: #fff;
+  margin-left: 0.24rem;
+  border-bottom: 0.02rem solid #f1f1f1;
+}
+.container-index #main .total .checkbox {
+  width: 0.42rem;
+  height: 100%;
+  float: left;
+  background: red;
+}
+.container-index #main .total .total-content {
+  width: 6.54rem;
+  height: 100%;
+  background: #1B6D85;
+  float: left;
+}
+.container-index #main .guess-like {
+  width: 100%;
+  height: auto;
+  margin-top: 0.18rem;
+  float: left;
+}
+.container-index #main .guess-like div.header {
+  width: 100%;
+  height: 0.76rem;
+  line-height: 0.76rem;
+  background: url(../image/tuijian.png) 0.15rem 0.09rem no-repeat;
+  background-size: 0.61rem 0.53rem;
+}
+.container-index #main .guess-like div.header span {
+  display: inline-block;
+  height: 100%;
+  line-height: 0.76rem;
+  width: 40%;
+  float: left;
+  font-size: 0.27rem;
+  padding-left: 1rem;
+}
+.container-index #main .guess-like .guess-like-content {
+  width: 100%;
+  height: 9rem;
+  background: #fff;
+}
+.container-index #main .guess-like .guess-like-content li {
+  list-style: none;
+  float: left;
+  box-sizing: border-box;
+  width: 33.33%;
+  height: 2.4rem;
+}
+.container-index #main .guess-like .guess-like-content li.first {
+  position: relative;
+}
+.container-index #main .guess-like .guess-like-content li.first .img-wrap {
+  width: 1.66rem;
+  height: 1.1rem;
+  margin: 0.2rem auto;
+}
+.container-index #main .guess-like .guess-like-content li.first .img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.container-index #main .guess-like .guess-like-content li.first .title1 {
+  font-size: 0.2rem;
+  color: #000;
+  margin-left: 0.15rem;
+}
+.container-index #main .guess-like .guess-like-content li.first .title2 {
+  font-size: 0.2rem;
+  color: #000;
+  margin-top: -0.07rem;
+  margin-left: 0.15rem;
+}
+.container-index #main .guess-like .guess-like-content li.first .score {
+  font-size: 0.15rem;
+  color: #ed5253;
+  text-align: left;
+  margin-left: 0.15rem;
+  margin-top: -0.02rem;
+}
+.container-index #main .guess-like .guess-like-content li.first .score span {
+  font-size: 0.24rem;
+  color: #ed5253;
+}
+.container-index .cart-mask {
+  width: 100%;
+  height: 12.8rem;
+  background: #4c4c4c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100000;
+  opacity: .8;
+}
+.container-index .cart-popover {
+  width: 6.5rem;
+  height: 6.04rem;
+  margin: 0 auto;
+  background: red;
+  border-radius: 0.04rem;
+  z-index: 100001;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  margin-top: 0.1rem;
+  margin-left: -3.25rem;
+}
+.container-index .cart-popover p {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #c4c3c3;
+  font-size: 0.24rem;
+  line-height: 0.92rem;
+  text-align: center;
+}
+.container-index .cart-popover p.title,
+.container-index .cart-popover p.blank {
+  height: 0.92rem;
+  line-height: 0.92rem;
+}
+.container-index .cart-popover p.quantity,
+.container-index .cart-popover p.score-total,
+.container-index .cart-popover p.score-discount,
+.container-index .cart-popover p.score-current {
+  height: 0.84rem;
+  line-height: 0.84rem;
+}
+.container-index .cart-popover p.pay {
+  height: 0.88rem;
+  line-height: 0.88rem;
+}
+.container-index .cart-popover p.pay button {
+  display: inline-block;
+  width: 50%;
+  height: 0.88rem;
+  text-align: center;
+  line-height: 0.88rem;
+  border: none;
+  font-size: 0.24rem;
+  color: #fff;
+}
+.container-index .cart-popover p.pay button.ok {
+  background: #ed5253;
+}
+.container-index .cart-popover p.pay button.cancel {
+  background: #f89c00;
+}

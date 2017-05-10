@@ -1,0 +1,321 @@
+html {
+  font-family: "微软雅黑";
+  background: #f4f4f4;
+}
+.color1 {
+  background: #122B40;
+}
+.color2 {
+  background: #D0E9C6;
+}
+.color3 {
+  background: #AFD9EE;
+}
+.color4 {
+  background: #D43F3A;
+}
+.color5 {
+  background: #ADADAD;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+div {
+  box-sizing: border-box;
+}
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.container-index {
+  width: 100%;
+  height: auto;
+  min-height: 12.8rem;
+  background: #f1f1f1;
+  padding-top: 0.96rem;
+}
+.container-index header#header {
+  width: 100%;
+  height: 0.96rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+.container-index header#header p {
+  width: 100%;
+  height: 100%;
+  font-size: 0.27rem;
+  font-family: "微软雅黑";
+  line-height: 0.96rem;
+  text-align: center;
+  color: #000;
+}
+.container-index header#header p.back {
+  width: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.2rem;
+  text-align: right;
+  color: #595757;
+}
+.container-index #main {
+  width: 100%;
+  height: auto;
+  margin-top: 0.02rem;
+  padding-bottom: 5.96rem;
+  background: #fff;
+}
+.container-index #main .user-info {
+  width: 100%;
+  height: 2.06rem;
+}
+.container-index #main .user-info .user-info-content {
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.container-index #main .user-info .user-info-content a {
+  display: inline-block;
+  width: 1.08rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ffffff url(../image/icon/go.png) center center no-repeat;
+  background-size: 0.19rem 0.37rem;
+}
+.container-index #main .user-info .user-info-content p {
+  width: 7.12rem;
+  height: 100%;
+  font-size: 0.27rem;
+  color: #000;
+  padding-top: 0.36rem;
+  font-weight: bold;
+}
+.container-index #main .user-info .user-info-content p span {
+  display: inline-block;
+}
+.container-index #main .user-info .user-info-content p span.name {
+  width: 2.3rem;
+  height: 0.36rem;
+  text-align: center;
+  line-height: 0.36rem;
+}
+.container-index #main .user-info .user-info-content p span.address {
+  font-size: 0.24rem;
+  font-weight: normal;
+  padding-left: 0.9rem;
+  padding-top: 0.22rem;
+}
+.container-index #main .user-info .user-info-content p .state {
+  display: inline-block;
+  width: 1.1rem;
+  height: 0.36rem;
+  text-align: center;
+  line-height: 0.36rem;
+  border-radius: 0.02rem;
+  background: #ed5253;
+  color: #fff;
+  font-size: 0.27rem;
+  position: static;
+  font-weight: normal;
+}
+.container-index #main .user-info .user-info-bg {
+  width: 100%;
+  height: 0.05rem;
+  margin-top: 0.15rem;
+  background: #ffffff url(../image/icon/settlement_bg.png) center center no-repeat;
+  background-size: 7.15rem 0.05rem;
+}
+.container-index #main .lists {
+  width: 100%;
+  height: auto;
+  background: fff;
+  border-top: 0.08rem solid #F1F1F1;
+}
+.container-index #main .lists li {
+  list-style: none;
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+}
+.container-index #main .lists li.first {
+  position: relative;
+}
+.container-index #main .lists li.first .img-wrap {
+  width: 3.06rem;
+  height: 2.22rem;
+  float: left;
+  text-align: center;
+}
+.container-index #main .lists li.first .img-wrap img {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.22rem;
+  margin-top: 0.4rem;
+}
+.container-index #main .lists li.first .title {
+  width: 4.14rem;
+  font-size: 0.24rem;
+  color: #000;
+  margin-top: 0.56rem;
+  float: left;
+}
+.container-index #main .lists li.first .count {
+  width: 4.14rem;
+  font-size: 0.24rem;
+  color: #898989;
+  margin-top: 0.32rem;
+  float: left;
+}
+.container-index #main .lists li.first .score {
+  width: 4.14rem;
+  font-size: 0.21rem;
+  color: #ed5253;
+  text-align: left;
+  margin-top: 0.35rem;
+  float: left;
+}
+.container-index #main .lists li.first .score span {
+  font-size: 0.3rem;
+  color: #ed5253;
+}
+.container-index #main .carry {
+  width: 100%;
+  height: 0.72rem;
+  border-top: 1px solid #c4c3c3;
+  border-bottom: 1px solid #c4c3c3;
+  background: #fff;
+}
+.container-index #main .carry p {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 0.24rem;
+  color: #000;
+  line-height: 0.72rem;
+  box-sizing: border-box;
+}
+.container-index #main .carry p.carry-style {
+  text-align: left;
+  padding-left: 0.44rem;
+}
+.container-index #main .carry p.carry-list {
+  text-align: right;
+  padding-right: 0.62rem;
+}
+.container-index #main .settlement-carry-mask {
+  width: 100%;
+  height: 13.5rem;
+  background: #4c4c4c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100000;
+  opacity: .8;
+}
+.container-index #main .settlement-carry-popover {
+  width: 6.5rem;
+  height: 6.04rem;
+  margin: 0 auto;
+  border-radius: 0.04rem;
+  z-index: 100001;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  margin-top: 1.5rem;
+  margin-left: -3.25rem;
+}
+.container-index #main .settlement-carry-popover p {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #c4c3c3;
+  font-size: 0.24rem;
+  line-height: 0.92rem;
+  text-align: center;
+}
+.container-index #main .settlement-carry-popover p.title,
+.container-index #main .settlement-carry-popover p.blank {
+  height: 0.92rem;
+  line-height: 0.92rem;
+}
+.container-index #main .settlement-carry-popover p.quantity,
+.container-index #main .settlement-carry-popover p.score-total,
+.container-index #main .settlement-carry-popover p.score-discount,
+.container-index #main .settlement-carry-popover p.score-current {
+  height: 0.84rem;
+  line-height: 0.84rem;
+}
+.container-index #main .settlement-carry-popover p.pay {
+  height: 0.88rem;
+  line-height: 0.88rem;
+}
+.container-index #main .settlement-carry-popover p.pay button {
+  display: inline-block;
+  width: 50%;
+  height: 0.88rem;
+  text-align: center;
+  line-height: 0.88rem;
+  border: none;
+  font-size: 0.24rem;
+  color: #fff;
+}
+.container-index #main .settlement-carry-popover p.pay button.ok {
+  background: #f89c00;
+}
+.container-index #main .settlement-carry-popover p.pay button.cancel {
+  background: #ed5253;
+}
+.container-index #footer {
+  width: 100%;
+  height: 0.96rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #c4c3c3;
+}
+.container-index #footer p {
+  height: 100%;
+  line-height: 0.96rem;
+  font-size: 0.27rem;
+  color: #ed5253;
+  float: left;
+  box-sizing: border-box;
+}
+.container-index #footer p.total {
+  width: 58%;
+  text-align: right;
+  padding-right: 0.35rem;
+}
+.container-index #footer p.total span {
+  font-size: 0.21rem;
+}
+.container-index #footer p.total span.total-num {
+  font-size: 0.27rem;
+}
+.container-index #footer p.pay {
+  width: 42%;
+  color: #FFF;
+  background: #ED5253;
+  text-align: center;
+}

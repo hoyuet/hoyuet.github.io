@@ -1,0 +1,123 @@
+html{font-family: "微软雅黑";background: #f4f4f4;}
+.color1{background: #122B40;}
+.color2{background: #D0E9C6;}
+.color3{background: #AFD9EE;}
+.color4{background: #D43F3A;}
+.color5{background: #ADADAD;}
+.clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
+.clearfix{*zoom:1;}
+div{box-sizing: border-box;}
+.link{display: inline-block;width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+.container-index{
+    width: 100%;height: auto;min-height:1280px;background: #f1f1f1;padding-top: 96px;
+    header#header{
+        width: 100%;height: 96px;background: #fff;position: fixed;left: 0;top: 0;z-index: 99999;
+        p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;color: #000;
+            &.back{width:90px;position: absolute;left:0;top:0;font-size: 20px;text-align: right;color: #595757;}
+        }
+        
+        
+    }
+    #main{
+        width: 100%;height: auto;margin-top: 2px;padding-bottom: 596px;background: #fff;
+        .user-info{
+            width: 100%;height: 206px;
+            .user-info-content{
+                width: 100%;height: 150px;background: #fff;position: relative;left: 0;top: 0;
+                a{
+                    display: inline-block;width: 108px;height: 100%;position: absolute;right: 0;top: 0;
+                    background: #fff url(../image/icon/go.png) center center no-repeat;background-size: 19px 37px;
+                }
+                p{
+                    width: 712px;height: 100%;font-size: 27px;color: #000;padding-top: 36px;font-weight: bold;
+                    span{
+                        display: inline-block;
+                        &.name{
+                            width: 230px;height:36px;text-align: center;line-height: 36px;
+                        }
+                        &.mobile{
+//                          width: 180px;height:100%;
+                            
+                        }
+                        &.address{
+                            font-size: 24px;font-weight: normal;padding-left: 90px;padding-top:22px;
+                        }
+                    }
+                    .state{
+                        display: inline-block;width: 110px;height: 36px; text-align: center;line-height: 36px; border-radius: 2px; 
+                        background: #ed5253;color: #fff;font-size:27px;position: static;font-weight: normal;
+                    }
+                }
+            }
+            .user-info-bg{width: 100%;height: 5px;margin-top:15px;background: #fff url(../image/icon/settlement_bg.png) center center no-repeat;background-size: 715px 5px;}
+        }
+        .lists{
+            width: 100%;height: auto;background: fff;border-top: 8px solid #F1F1F1;
+            li{
+                list-style: none;float: left;box-sizing: border-box;width: 100%;height: 300px;
+                &.first{
+                    position: relative;
+                    .img-wrap{
+                        width: 306px;height: 222px;float: left;text-align: center;
+                        img{display: inline-block; width: 220px;height: 222px;margin-top: 40px;}
+                    }
+                    
+                    .title{width: 414px; font-size: 24px;color: #000;margin-top: 56px;float: left;}
+                    .count{width: 414px; font-size: 24px;color: #898989;margin-top: 32px;float: left;}
+                    .score{
+                        width: 414px; font-size: 21px;color: #ed5253;text-align: left;margin-top: 35px;float: left;
+                        span{
+                            font-size: 30px;color: #ed5253;
+                        }
+                    }
+                }           
+            }
+        }
+        .carry{
+            width: 100%;height: 72px;border-top: 1px solid #c4c3c3;border-bottom: 1px solid #c4c3c3;background: #fff;
+            p{
+                width: 50%;height: 100%;float: left;font-size: 24px;color: #000;line-height: 72px;box-sizing: border-box;
+                &.carry-style{text-align:left;padding-left: 44px;}
+                &.carry-list{text-align: right;padding-right: 62px;}
+            }
+        }
+        .settlement-carry-mask{
+            width: 100%;height: 1350px;background: #4c4c4c;position: fixed;left: 0;top: 150px;z-index: 100000;opacity: .8;      
+        }
+        .settlement-carry-popover{
+            width: 650px;height: 604px;margin: 0 auto;border-radius: 4px;z-index: 100001;position: fixed;left: 50%;top: 0;margin-top: 10px;margin-left: -325px;
+            p{
+                width: 100%;background: #fff;border-bottom: 1px solid #c4c3c3;font-size: 24px;line-height: 92px;text-align: center;
+                &.title,&.blank{height: 92px;line-height: 92px;}
+                &.quantity,&.score-total,&.score-discount,&.score-current{height: 84px;line-height: 84px;}
+                &.pay{
+                    height: 88px;line-height: 88px;
+                    button{
+                        display:inline-block;width: 50%;height:88px;text-align: center;line-height: 88px;border: none;font-size: 24px;color: #fff;
+                        &.ok{background: #f89c00;}
+                        &.cancel{background: #ed5253;}
+                    }
+                }
+               
+            }
+        }
+    }
+    #footer{
+        width: 100%;height: 96px;background: #fff;position: fixed;left: 0;bottom: 0;border-top: 1px solid #c4c3c3;
+        p{
+            height: 100%;line-height: 96px;font-size: 27px;color:#ed5253;float: left;box-sizing: border-box;
+            &.total{
+                width: 58%;text-align: right;padding-right: 35px;
+                span{
+                    font-size: 21px;
+                    &.total-num{
+                        font-size: 27px;
+                    }
+                }
+            }
+            &.pay{
+                width:42%;color: #FFF;background: #ED5253;text-align: center;
+            }
+        }
+    }
+}
