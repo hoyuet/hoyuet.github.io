@@ -54,7 +54,7 @@ div {
   font-family: "微软雅黑";
   line-height: 0.96rem;
   text-align: center;
-  color: #000;
+  color: #fff;
 }
 .container-index header#header p.back {
   width: 0.9rem;
@@ -68,8 +68,8 @@ div {
   height: 100%;
   font-size: 0.2rem;
   text-align: right;
-  color: #595757;
-  background: url(../image/back-1.png) 0.2rem center no-repeat;
+  color: #fff;
+  background: url(../image/icon/back.png) 0.2rem center no-repeat;
   background-size: 0.12rem 0.18rem;
 }
 .container-index #main {
