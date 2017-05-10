@@ -205,8 +205,8 @@ div {
   width: 100%;
   height: 0.72rem;
   line-height: 0.72rem;
-  background: #ffffff url(../image/tuijian.png) 0.15rem 0.09rem no-repeat;
-  background-size: 0.61rem 0.53rem;
+  background: #ffffff url(../image/icon/recommend.png) 0.15rem 0.09rem no-repeat;
+  background-size: 0.64rem 0.56rem;
 }
 .container-index #main .recommend div.header span {
   display: inline-block;
@@ -359,8 +359,8 @@ div {
   width: 100%;
   height: 0.72rem;
   line-height: 0.72rem;
-  background: #ffffff url(../image/tuijian.png) 0.15rem 0.09rem no-repeat;
-  background-size: 0.61rem 0.53rem;
+  background: #ffffff url(../image/icon/product_new.png) 0.15rem 0.09rem no-repeat;
+  background-size: 0.56rem 0.61rem;
 }
 .container-index #main .product-new div.header span {
   display: inline-block;
@@ -436,8 +436,8 @@ div {
   width: 100%;
   height: 0.72rem;
   line-height: 0.72rem;
-  background: #ffffff url(../image/tuijian.png) 0.15rem 0.09rem no-repeat;
-  background-size: 0.61rem 0.53rem;
+  background: #ffffff url(../image/icon/guess.png) 0.15rem 0.09rem no-repeat;
+  background-size: 0.54rem 0.53rem;
 }
 .container-index #main .guess-like div.header span {
   display: inline-block;
