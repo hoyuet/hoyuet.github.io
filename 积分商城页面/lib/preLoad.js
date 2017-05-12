@@ -64,7 +64,7 @@ var _LoadingHtml = '<div id="loadingPage" style="position:fixed;left:0;top:0;_po
                     options.delayTime,
                     function () {
                         $(this).hide();
-$(this).show();
+//$(this).show();
 
                     });
 
