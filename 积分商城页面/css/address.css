@@ -108,6 +108,11 @@ div {
 .container-index #main ul li span {
   display: inline-block;
 }
+.container-index #main ul li input{
+	display: inline-block;
+  border: none;
+  width: 5rem;
+}
 .container-index #main ul li a {
   position: relative;
   overflow: hidden;

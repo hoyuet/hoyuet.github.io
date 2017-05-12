@@ -102,12 +102,13 @@ div {
   position: relative;
   left: 0;
   top: 0;
+  box-sizing: border-box;
 }
 .container-index #main ul li P {
   width: 0.5rem;
   height: 0.84rem;
   position: absolute;
-  right: 0.45rem;
+  right: 0.15rem;
   top: 0;
   line-height: 0.84rem;
   text-align: center;
@@ -115,17 +116,23 @@ div {
 }
 .container-index #main ul li P #checkbox-1,
 .container-index #main ul li P #checkbox-2,
-.container-index #main ul li P #checkbox-3 {
+.container-index #main ul li P #checkbox-3,
+.container-index #main ul li P #checkbox-4,
+.container-index #main ul li P #checkbox-5 {
   display: none;
   visibility: hiiden;
 }
 .container-index #main ul li P #checkbox-1 + label,
 .container-index #main ul li P #checkbox-2 + label,
-.container-index #main ul li P #checkbox-3 + label {
+.container-index #main ul li P #checkbox-3 + label,
+.container-index #main ul li P #checkbox-4 + label,
+.container-index #main ul li P #checkbox-5 + label {
   color: #fff;
 }
 .container-index #main ul li P #checkbox-1:checked + label,
 .container-index #main ul li P #checkbox-2:checked + label,
-.container-index #main ul li P #checkbox-3:checked + label {
+.container-index #main ul li P #checkbox-3:checked + label,
+.container-index #main ul li P #checkbox-4:checked + label,
+.container-index #main ul li P #checkbox-5:checked + label {
   color: red;
 }

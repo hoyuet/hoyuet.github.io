@@ -101,6 +101,7 @@ div {
   font-size: 0.24rem;
   color: #000;
   border: none;
+  box-sizing: border-box;
 }
 .container-index #main .change span {
   display: inline-block;

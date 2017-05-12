@@ -108,7 +108,8 @@ div {
   color: #000;
   font-size: 0.27rem;
   border-bottom: 1px solid #F1F1F1;
-  background: #FAFAFA url(../image/tuijian.png) 0.2rem center no-repeat;background-size: 0.7rem 0.6rem;
+  background:#FAFAFA url(../image/icon/guess.png) 0.25rem 0.3rem no-repeat;
+  background-size: 0.46rem 0.45rem;
 }
 .container-index #main ul {
   width: 100%;

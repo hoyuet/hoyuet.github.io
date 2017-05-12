@@ -6,6 +6,14 @@ html{font-family: "微软雅黑";}
 .color5{background: #ADADAD;}
 .clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
 .clearfix{*zoom:1;}
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 div{box-sizing: border-box;}
 .container-index{
     width: 100%;height: auto;min-height:1280px;background: #fff;padding-top: 96px;padding-bottom: 96px;
@@ -64,7 +72,7 @@ div{box-sizing: border-box;}
             .sort-item{
                 width: 100%;height: 234px;border-bottom: 1px solid #F1F1F1;
                 .item-img{
-                    width: 334px;height: 100%;float: left;
+                    width: 334px;height: 100%;float: left;position: relative;
                     img{width: 100%;height: 100%;}
                 }
                 .other{

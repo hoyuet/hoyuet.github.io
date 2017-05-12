@@ -131,7 +131,7 @@ div {
   height: 0.36rem;
   text-align: center;
   line-height: 0.36rem;
-  border-radius: 0.02rem;
+  border-radius: 0.04rem;
   background: #ed5253;
   color: #fff;
   font-size: 0.27rem;
@@ -281,6 +281,16 @@ div {
 }
 .container-index #main .settlement-carry-popover p.pay button.ok {
   background: #f89c00;
+}
+.container-index #main .settlement-carry-popover p.pay button.ok a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  line-height: 0.88rem;
+  border: none;
+  font-size: 0.24rem;
+  color: #fff;
 }
 .container-index #main .settlement-carry-popover p.pay button.cancel {
   background: #ed5253;

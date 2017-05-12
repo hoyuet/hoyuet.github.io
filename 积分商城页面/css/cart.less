@@ -13,7 +13,7 @@ html{font-family: "微软雅黑";background: #f1f1f1;}
 }
 div{box-sizing: border-box;}
 .container-index{
-    width: 100%;height: auto;min-height:1280px;background:#fff;padding-top: 96px;
+    width: 100%;height: auto;min-height:1280px;background:#fff;padding-top: 96px;padding-bottom:96px;
     header#header{
         width: 100%;height: 96px;background: #fff;position: fixed;left: 0;top: 0;z-index: 99999;
         p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;color: #000;
@@ -176,6 +176,27 @@ div{box-sizing: border-box;}
                 }
             }
            
+        }
+    }
+    footer#footer{
+        width: 100%;height: 96px;position: fixed;left: 0;bottom: 0;z-index: 99999;
+        nav{
+            width: 100%;height: 100%;background: #ed5253;
+            ul{
+                width: 100%;height: 100%;
+                li{
+                    width: 25%;height: 100%;float: left;position: relative;left: 0;top: 0;
+                    &.active{background: #ff8787;}
+                    a{  
+                        position: absolute;left: 0;top: 0;
+                        display: inline-block;width: 100%;height: 100%;
+                        &.home-icon{background: url(../image/index/首页.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.cart-icon{background: url(../image/index/购物车.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.collect-icon{background: url(../image/index/收藏.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.user-icon{background: url(../image/index/个人中心.png) 0 0 no-repeat;background-size: 100% 100%;}
+                    }
+                }
+            }
         }
     }
 }

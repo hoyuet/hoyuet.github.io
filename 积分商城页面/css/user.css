@@ -28,6 +28,14 @@ html {
 .clearfix {
   *zoom: 1;
 }
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 div {
   box-sizing: border-box;
 }
@@ -292,6 +300,7 @@ div {
   border-bottom: 1px solid #F1F1F1;
   font-size: 0.2rem;
   color: #000;
+  position: relative;
 }
 .container-index #main .user-order .user-order-content .user-order-list ul li .img-wrap {
   width: 1.8rem;
@@ -299,6 +308,7 @@ div {
   text-align: center;
   float: left;
   margin-top: 0.1rem;
+  
 }
 .container-index #main .user-order .user-order-content .user-order-list ul li .img-wrap img {
   width: 1.2rem;
@@ -373,22 +383,72 @@ div {
 .container-index #main .user-activities .user-activities-content {
   width: 100%;
   height: 1.5rem;
-  background: #ffffff url(../image/user/activities.png) 0 0 no-repeat;
+  /*background: #ffffff url(../image/user/activities.png) 0 0 no-repeat;*/
   margin-bottom: 0.06rem;
-  background-size: 7.2rem 1.49rem;
+  /*background-size: 7.2rem 1.49rem;*/
 }
 .container-index #main .user-activities .user-activities-content ul {
   width: 100%;
   height: 100%;
 }
 .container-index #main .user-activities .user-activities-content ul li {
-  width: 1.1rem;
+  width: 25%;
   height: 100%;
   float: left;
-  margin: 0 0.33rem;
+  /*margin: 0 0.33rem;*/
 }
 .container-index #main .user-activities .user-activities-content ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
+  /*background: red;*/
+}
+.container-index #main .user-activities .user-activities-content ul li a img{
+	display: inline-block;width: 100%;height: 100%;
+}
+.container-index footer#footer {
+  width: 100%;
+  height: 0.96rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+.container-index footer#footer nav {
+  width: 100%;
+  height: 100%;
+  background: #ed5253;
+}
+.container-index footer#footer nav ul {
+  width: 100%;
+  height: 100%;
+}
+.container-index footer#footer nav ul li {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+.container-index footer#footer nav ul li.active {
+  background: #ff8787;
+}
+.container-index footer#footer nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.container-index footer#footer nav ul li a.home-icon {
+  background: url(../image/index/首页.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.container-index footer#footer nav ul li a.cart-icon {
+  background: url(../image/index/购物车.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.container-index footer#footer nav ul li a.collect-icon {
+  background: url(../image/index/收藏.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.container-index footer#footer nav ul li a.user-icon {
+  background: url(../image/index/个人中心.png) 0 0 no-repeat;
+  background-size: 100% 100%;
 }

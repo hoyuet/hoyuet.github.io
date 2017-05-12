@@ -6,6 +6,14 @@ html{font-family: "微软雅黑";background: #f1f1f1;}
 .color5{background: #ADADAD;}
 .clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
 .clearfix{*zoom:1;}
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 div{box-sizing: border-box;}
 .container-index{
     width: 100%;height:1280px;padding-top: 96px;background: #fff;
@@ -115,7 +123,7 @@ div{box-sizing: border-box;}
                     ul{
                         width: 100%;height: auto;float: left;
                         li{
-                            float: left;width: 100%;height:auto;min-height: 140px;border-bottom: 1px solid #F1F1F1;font-size: 20px;color: #000;
+                            position: relative;float: left;width: 100%;height:auto;min-height: 140px;border-bottom: 1px solid #F1F1F1;font-size: 20px;color: #000;
                             .img-wrap{
                                 width: 180px;height: 100%;text-align:center;float: left;margin-top: 10px;
                                 img{width: 120px;height: 120px;}
@@ -156,13 +164,18 @@ div{box-sizing: border-box;}
                 width: 100%;height: 66px;line-height: 80px;background: #fff;color: #000;font-size: 24px;padding-left: 22px;margin-bottom: 1px;
             }
             .user-activities-content{
-                width: 100%;height: 150px;background: #fff url(../image/user/activities.png) 0 0 no-repeat;margin-bottom: 6px;
+                width: 100%;height: 150px;
+//              background: #fff url(../image/user/activities.png) 0 0 no-repeat;
+                margin-bottom: 6px;
                 background-size: 720px 149px;
                 ul{
                     width: 100%;height: 100%;
                     li{
                         width: 110px;height: 100%;float: left;margin: 0 33px;
-                        a{display: inline-block;width: 100%;height: 100%;}
+                        a{
+                            display: inline-block;width: 100%;height: 100%;
+                            img{display: inline-block;width: 100%;height: 100%;}
+                        }
                     }
                 }
             }
@@ -186,5 +199,25 @@ div{box-sizing: border-box;}
 //          }
 //          
 //      }
+    }
+    footer#footer{
+        width: 100%;height: 96px;position: fixed;left: 0;bottom: 0;z-index: 99999;
+        nav{
+            width: 100%;height: 100%;background: #ed5253;
+            ul{
+                width: 100%;height: 100%;
+                li{
+                    width: 25%;height: 100%;float: left;
+                    &.active{background: #ff8787;}
+                    a{
+                        display: inline-block;width: 100%;height: 100%;
+                        &.home-icon{background: url(../image/index/首页.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.cart-icon{background: url(../image/index/购物车.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.collect-icon{background: url(../image/index/收藏.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.user-icon{background: url(../image/index/个人中心.png) 0 0 no-repeat;background-size: 100% 100%;}
+                    }
+                }
+            }
+        }
     }
 }

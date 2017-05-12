@@ -104,6 +104,7 @@ div {
   display: inline-block;
   height: 100%;
   float: right;
+  padding-right: 0.24rem;
 }
 .container-index #main .news-content ul li.read {
   background: url(../image/read.png) 0.2rem 0.06rem no-repeat;
