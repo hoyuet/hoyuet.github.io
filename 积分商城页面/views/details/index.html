@@ -8,6 +8,7 @@
 		<!--<link rel="stylesheet/less" type="text/css" href="/积分商城页面/css/detail.less"/>-->
 		<link rel="stylesheet" href="/积分商城页面/css/detail.css" />
 		<link rel="stylesheet" type="text/css" href="/积分商城页面/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/积分商城页面/css/dropload.css"/>
 	</head>
 	<body>
 		<div class="container-index clearfix">
@@ -31,24 +32,35 @@
 				</div>
 				<div class="tips">*该商品享受会员等级优惠</div>
 				<div class="nums">已选:<span>x</span><span class="nums-total">1</span></div>
-				<div class="address">填写地址</div>
+				<!--<div class="address">填写地址: <span>上海市徐汇区越界28号608上海市徐汇区越界28号608</span></div>-->
+				<div class="address">添加地址：</div>
 				<div class="drag">上拉查看图文详情</div>
 				<!--<div class="detail-mask">
 					
 				</div>-->
 				<!--填写地址-->
-				<!--<div class="address-fill">
+				<div class="address-fill">
 					<p class="title">配送至<span class="close">X</span></p>
 					<ul class="clearfix">
+						<li>上海市徐汇区越界28号608上海市徐汇28号608上海市徐汇28号608上海市徐汇区越界28号608号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
+						<li>上海市徐汇区越界28号608</li>	
 						<li>上海市徐汇区越界28号608</li>	
 					</ul>
 					<div class="create-address">
 						新建地址
 					</div>
-				</div>-->
+				</div>
 				<!--填写地址end-->
 				<!--已选-->
-					<!--<div class="nums-select">
+					<div class="nums-select">
 						<div class="shop-show"><img src="../../image/detail/detail_num.png"/></div>
 						<div class="shop-detail">
 							<p class="shop-score">积分：<span>5000</span></p>
@@ -63,16 +75,30 @@
 						<div class="behavior">
 							<a href="javascript:;" class="cart">加入购物车</a><a href="javascript:;" class="exchange">立即兑换</a>
 						</div>
-					</div>-->
+					</div>
 				<!--已选end-->
+				<div class="settlement-carry-popover">
+					<div class="settlement-carry-mask">
+						
+					</div>
+					<div class="settlement-carry-popover-content">
+						<p class="title">您是否确定支付相应积分来完成本次交易 ？</p>
+						<p class="quantity">购买商品数量： <span>1</span>件</p>
+						<p class="score-total">总积分： <span>5000</span>分</p>
+						<p class="score-discount">会员折扣： 享受<span>10</span>%优惠</p>
+						<p class="score-current">应付积分：<span>4920</span>分</p>
+						<p class="blank"></p>
+						<p class="pay"><button class="ok"><a href="/积分商城页面/views/settlement/settlement-success.html">确认支付</a></button><button class="cancel">取消支付</button></p>
+					</div>
+				</div>
 			</div>
 			<footer id="footer">
 				<nav>
 					<ul>
-						<li class="collect"><a href="#"></a></li>
-						<li class="cart"><a href="#"></a></li>
-						<li class="shopping"><a href="#"></a></li>
-						<li class="exchange"><a href="#"></a></li>
+						<li class="collect"><a href="/积分商城页面/views/collect/"></a></li>
+						<li class="cart"><a href="/积分商城页面/views/cart/"></a></li>
+						<li class="shopping"><a href="/积分商城页面/views/cart/index-pay.html"></a></li>
+						<li class="exchange"><a href="javascript:;"></a></li>
 					</ul>
 				</nav>
 			</footer>
@@ -83,6 +109,7 @@
 		<script src="/积分商城页面/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/less.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/dropload.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/preLoad.js" type="text/javascript" charset="utf-8"></script>

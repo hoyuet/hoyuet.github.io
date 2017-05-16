@@ -131,8 +131,8 @@ div {
 }
 .container-index #main .shortcut_btn ul li.shortcut_divider {
   width: 1.11rem;
-  border-left: 1px solid #dcdddd;
-  border-right: 1px solid #dcdddd;
+  /*border-left: 1px solid #dcdddd;
+  border-right: 1px solid #dcdddd;*/
 }
 .container-index #main .shortcut_btn ul li p {
   width: 0.16rem;
@@ -225,6 +225,10 @@ div {
   color: #fff;
   background: #ed5253;
   border-radius: 0.07rem;
+  position: relative;
+}
+.container-index #main .sort-content .sort-item .other p.go-exchange button a{
+	color: #fff;
 }
 .container-index footer#footer {
   width: 100%;

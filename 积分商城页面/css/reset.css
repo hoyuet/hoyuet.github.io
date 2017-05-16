@@ -11,7 +11,7 @@ sub{vertical-align:text-bottom}
 legend{color:#000}
 ol,ul{list-style:none}
 a{color:#BBB;text-decoration:none;}
-a:hover{color:#FF6600;}
+a:hover{color:#FF6600;text-decoration: none;}
 fieldset,img{border:0 none;}
 textarea{resize:none;}
 a,input,button,select,textarea{outline:none;}

@@ -62,8 +62,16 @@ div {
   position: absolute;
   left: 0;
   top: 0;
+}
+.container-index header#header p.back a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   font-size: 0.2rem;
   text-align: right;
+  color: #595757;
+  background: url(../image/back-1.png) 0.2rem center no-repeat;
+  background-size: 0.12rem 0.18rem;
 }
 .container-index #main {
   width: 100%;

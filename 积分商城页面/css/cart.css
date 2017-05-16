@@ -298,6 +298,9 @@ div {
   font-size: 0.27rem;
   color: #fff;
   background: #ed5253;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 .container-index #main .total .total-content P.settlement span,
 .container-index #main .total .total-content P.settlement i {

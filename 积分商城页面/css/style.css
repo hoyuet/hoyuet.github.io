@@ -83,9 +83,10 @@ div {
   background: orange;
   border-radius: 50%;
   position: relative;
-  left: 0.14rem;
-  top: -0.8rem;
+  left: 0rem;
+  top: -0.1rem;
 }
+
 .container-index header#header .dropdown-menu {
   position: absolute;
   right: 0;

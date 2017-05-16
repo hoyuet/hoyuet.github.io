@@ -153,6 +153,14 @@ div {
   background:#fff url(../image/icon/go.png) 7.1rem center  no-repeat;
   background-size: 0.12rem 0.21rem;
 }
+.container-index #main .address span{
+display: inline-block;
+width: 6.7rem;
+height: 100%;
+overflow:hidden; 
+white-space:nowrap; 
+text-overflow:ellipsis; 
+}
 .container-index #main .drag {
   width: 100%;
   height: 0.5rem;
@@ -175,13 +183,13 @@ div {
   opacity: .8;
 }
 .container-index #main .address-fill {
-  display: none;
+  -display: none;
   z-index: 100000;
   position: fixed;
-  bottom: 0;
+  bottom: -10rem;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 5rem;
   min-height: 6rem;
   background: #fff;
   margin-top: 0.34rem;
@@ -206,10 +214,11 @@ div {
 }
 .container-index #main .address-fill ul {
   width: 100%;
-  height: auto;
+  height: 5rem;
   padding: 0px 0.3rem;
   font-size: 0.24rem;
   color: #c4c3c3;
+  overflow:scroll;
 }
 .container-index #main .address-fill ul li {
   float: left;
@@ -221,6 +230,9 @@ div {
   padding-left: 0.3rem;
   background: url(../image/icon/marker.png) 0 center no-repeat;
   background-size: 0.21rem 0.27rem;
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
 }
 .container-index #main .address-fill .create-address {
   width: 100%;
@@ -241,7 +253,7 @@ div {
   background: #fff;
   z-index: 100000;
   position: fixed;
-  bottom: 0;
+  bottom: -5rem;
   left: 0;
   background: #fff;
 }
@@ -309,6 +321,7 @@ div {
   box-sizing: border-box;
   font-size: 0.4rem;
   float: left;
+  box-sizing: border-box;
 }
 .container-index #main .nums-select .count span.count-sub {
   color: #898989;
@@ -323,7 +336,7 @@ div {
 }
 .container-index #main .nums-select .count input.count-result {
   display: inline-block;
-  width: 1.34rem;
+  width: 1.3rem;
   height: 100%;
   box-sizing: border-box;
   color: #000;
@@ -331,6 +344,7 @@ div {
   border: none;
   float: left;
   text-align: center;
+  box-sizing: border-box;
 }
 .container-index #main .nums-select .behavior {
   width: 100% ;
@@ -388,4 +402,78 @@ div {
   display: inline-block;
   width: 100%;
   height: 100%;
+}
+.container-index #main .settlement-carry-mask {
+  width: 100%;
+  height: 13.5rem;
+  background: #4c4c4c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100000;
+  opacity: .8;
+  display: none;
+}
+.container-index #main .settlement-carry-popover-content {
+
+  width: 6.5rem;
+  height: 6.04rem;
+  margin: 0 auto;
+  border-radius: 0.04rem;
+  z-index: 100001;
+  position: fixed;
+  left: 50%;
+  top: -10rem;
+  margin-top: 1.5rem;
+  margin-left: -3.25rem;
+}
+.container-index #main .settlement-carry-popover-content p {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #c4c3c3;
+  font-size: 0.24rem;
+  line-height: 0.92rem;
+  text-align: center;
+}
+.container-index #main .settlement-carry-popover-content p.title,
+.container-index #main .settlement-carry-popover-content p.blank {
+  height: 0.92rem;
+  line-height: 0.92rem;
+}
+.container-index #main .settlement-carry-popover-content p.quantity,
+.container-index #main .settlement-carry-popover-content p.score-total,
+.container-index #main .settlement-carry-popover-content p.score-discount,
+.container-index #main .settlement-carry-popover-content p.score-current {
+  height: 0.84rem;
+  line-height: 0.84rem;
+}
+.container-index #main .settlement-carry-popover-content p.pay {
+  height: 0.88rem;
+  line-height: 0.88rem;
+}
+.container-index #main .settlement-carry-popover-content p.pay button {
+  display: inline-block;
+  width: 50%;
+  height: 0.88rem;
+  text-align: center;
+  line-height: 0.88rem;
+  border: none;
+  font-size: 0.24rem;
+  color: #fff;
+}
+.container-index #main .settlement-carry-popover-content p.pay button.ok {
+  background: #f89c00;
+}
+.container-index #main .settlement-carry-popover-content p.pay button.ok a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  line-height: 0.88rem;
+  border: none;
+  font-size: 0.24rem;
+  color: #fff;
+}
+.container-index #main .settlement-carry-popover-content p.pay button.cancel {
+  background: #ed5253;
 }
