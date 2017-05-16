@@ -1,0 +1,259 @@
+html{font-family: "微软雅黑";}
+.color1{background: #122B40;}
+.color2{background: #D0E9C6;}
+.color3{background: #AFD9EE;}
+.color4{background: #D43F3A;}
+.color5{background: #ADADAD;}
+.clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
+.clearfix{*zoom:1;}
+.link{display: inline-block;width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+div{box-sizing: border-box;}
+.container-index{
+    width: 100%;height: auto;padding-top: 96px;padding-bottom: 96px;background: #FAFAFA;
+    header#header{
+        width: 100%;height: 96px;background: #ed5253;position: fixed;left: 0;top: 0;z-index: 99999;
+        p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;color: #fff;
+            &.tips{
+                width:60px;position: absolute;right:0;top:0;font-size: 50px;line-height: 76px;
+                span{
+                    display: inline-block;width: 100%;height: 100%;
+                    i{
+                        display: inline-block;width:10px;height: 10px;background: orange;border-radius: 50%;
+                        position: relative;left: 14px;top: -80px;
+                    }
+                }
+            }
+        }
+        //modal
+        .dropdown-menu{
+            position:absolute;right: 0;top: 92px;left:initial;width: 200px;height: 80px;
+            li{
+                height: 34px;font-size: 20px;
+                a{
+                    display: inline-block;width: 100%;height: 26px;line-height: 26px;
+                    span{
+                        display: inline-block;width:10px;height: 10px;background: red;border-radius: 50%;
+                        position: relative;left: 0;top: -12px;
+                    }
+                }
+            }
+        }
+        .modal-content{
+            background: #eee;width:300px; height:400px;margin:0 auto;
+            .modal-header,.modal-footer{border: none;}
+            .modal-body{
+                text-align: center;
+                img{width: 240px;height: 240px;}
+            }
+            .modal-footer{
+                font-size: 20px;text-align: center;
+            }
+        }
+        #myModal{
+            width:300px; height:400px;margin:0 auto;margin-top:100px;
+            .modal-dialog{
+                width:300px; height:400px;margin:0 auto;
+            }
+        }
+        
+        //modal end
+        
+        
+        
+    }
+    #main{
+        width: 100%;height: auto;
+        .swiper-container {
+            width: 100%;height: 346px;
+            .swiper-wrapper{
+                width: 100%;height: 100%;
+                .swiper-slide{
+                    width: 100%;height: 100%;
+                    a{
+                        display: inline-block;width: 100%;height: 100%;
+                        img{
+                            width: 100%;height: 100%;
+                        }
+                    }
+                    
+                }
+            }
+        }  
+        .shortcut_btn{
+            width: 100%;height:124px ;background: #ccc;background: url(../image/index/shortcut.png) no-repeat;background-size: 100% 124px;
+            ul{
+                width: 100%;height: 100%;
+                li{width: 33.33%;height: 100%;float: left;
+                    a{display: inline-block;width: 100%;height: 100%;}
+                    &.shortcut_divider{width: 2px;background: red;}
+                }
+            }
+        }
+        .recommend{
+            width: 100%;height: auto;margin-top: 18px;
+            div.header{
+                 width: 100%;height: 72px;line-height: 72px;background: #fff url(../image/icon/recommend.png) 15px 9px no-repeat;
+                 background-size: 64px 56px;
+                span{
+                    display: inline-block;height: 100%;line-height: 72px;
+                    width: 40%;float: left;font-size: 27px;padding-left: 100px;                  
+                }
+                a{
+                    display: inline-block;height: 100%;line-height: 72px;
+                    width: 30%;float: right;font-size: 24px;padding-right: 20px;color: #464646;text-align: right;
+                }
+            }
+            .recommend-content{
+                width: 100%;height:auto;min-height: 326px;border-top: 2px solid #f1f1f1;background: #fff url(../image/首页线切图/精品推荐线.png) 0 0 no-repeat;
+                background-size: 100% 325px;
+                .first{position: relative;
+                    width: 50%;height: 100%;float: left;position: relative;background: #fff;
+                    .img-wrap{
+                        width: 260px;height: 220px;margin: 2px auto;
+                        img{width: 100%;height: 100%;}
+                    }
+                    
+                    .title{font-size: 24px;color: #000;margin-top: 12px;margin-left: 15px;}
+                    .score{
+                        font-size: 21px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: 12px;
+                        span{
+                            font-size: 30px;color: #ed5253;
+                        }
+                    }
+                    
+                }
+                .second{position: relative;
+                    width: 50%;height:auto;min-height: 162px;float: left;border-left: 2px solid #fafafa;background: #fff;
+                    .img-wrap{
+                        float: left;width: 160px;height: 150px;margin-left: 10px;margin-top: 10px;
+                        img{width: 100%;height: 100%;}
+                    }
+                    
+                    .title{float: left;width:150px;line-height:33px;font-size: 24px;color: #000;margin-top: 10px;margin-left: 15px;}
+                    .score{
+                        float: left;width:150px;font-size: 21px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: 35px;
+                        span{
+                            font-size: 30px;color: #ed5253;
+                        }
+                    }
+                }
+                .third{position: relative;
+                    width: 50%;height:auto;min-height: 162px;float: left;border-left: 2px solid #fafafa;border-top: 2px solid #fafafa;background: #fff;
+                    .img-wrap{
+                        float: right;width: 160px;height: 150px;margin-left: 10px;margin-top: 10px;
+                        img{width: 100%;height: 100%;}
+                    }
+                    
+                    .title{float: right;width:175px;line-height:33px;font-size: 24px;color: #000;margin-top: 10px;margin-left: 0px;}
+                    .score{
+                        float: right;width:175px;font-size: 21px;color: #ed5253;text-align: left;margin-left: 0px;margin-top: 35px;
+                        span{
+                            font-size: 30px;color: #ed5253;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .product-new{
+            width: 100%;height:auto;background: #C0C0C0;margin-top: 18px;
+            div.header{
+                 width: 100%;height: 72px;line-height: 72px;background: #fff url(../image/icon/product_new.png) 15px 9px no-repeat;
+                 background-size: 56px 61px;
+                span{
+                    display: inline-block;height: 100%;line-height: 72px;
+                   width:40%;float: left;font-size: 27px;padding-left: 100px;                  
+                }
+                a{
+                    display: inline-block;height: 100%;line-height: 72px;
+                    width: 30%;float: right;font-size: 24px;padding-right: 20px;color: #464646;text-align: right;
+                }
+            }
+            .product-new-content{
+                width: 100%;height:auto;min-height: 654px;border-top: 2px solid #f1f1f1;background: #fff url(../image/首页线切图/新品上架线.png)0 0 no-repeat;
+                background-size: 100% 704px;
+                li{
+                    list-style: none;float: left;box-sizing: border-box; width:360px;height:auto;min-height: 326px;background: #fff;
+                    &.first{
+                        position: relative;
+                        .img-wrap{
+                            width: 260px;height: 220px;margin: 2px auto;
+                            img{width: 100%;height: 100%;}
+                        }
+                        
+                        .title{font-size: 24px;color: #000;margin-top: 12px;margin-left: 15px;}
+                        .score{
+                            font-size: 21px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: 12px;
+                            span{
+                                font-size: 30px;color: #ed5253;
+                            }
+                        }
+                    }                
+                }
+               
+                
+                
+            }
+            
+        }
+        .guess-like{
+            width: 100%;height:auto;margin-top: 18px;float: left;
+            div.header{
+                 width: 100%;height:72px;line-height: 72px;background: #fff url(../image/icon/guess.png) 25px 14px no-repeat;
+                 background-size: 54px 53px;
+                span{
+                    display: inline-block;height: 100%;line-height: 72px;
+                    width: 40%;float: left;font-size: 27px;padding-left: 100px;                  
+                }
+                a{
+                    display: inline-block;height: 100%;line-height: 72px;
+                    width: 30%;float: right;font-size: 24px;padding-right: 20px;color: #464646;text-align: right;
+                }
+            }
+            .guess-like-content{
+                 width: 100%;height:auto;min-height: 654px;border-top: 2px solid #f1f1f1;background: #fff url(../image/首页线切图/猜你喜欢线.png)0 0 no-repeat;
+                background-size: 100% 670px;
+                li{
+                    list-style: none;float: left;box-sizing: border-box; width:360px;height:auto;min-height: 326px;background: #fff;
+                    &.first{
+                        position: relative;
+                        .img-wrap{
+                            width: 260px;height: 220px;margin: 2px auto;
+                            img{width: 100%;height: 100%;}
+                        }
+                        
+                        .title{font-size: 24px;color: #000;margin-top: 12px;margin-left: 15px;}
+                        .score{
+                            font-size: 21px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: 12px;
+                            span{
+                                font-size: 30px;color: #ed5253;
+                            }
+                        }
+                    }                
+                }
+                
+            }
+        }
+    }
+    
+    footer#footer{
+        width: 100%;height: 96px;position: fixed;left: 0;bottom: 0;z-index: 99999;
+        nav{
+            width: 100%;height: 100%;background: #ed5253;
+            ul{
+                width: 100%;height: 100%;
+                li{
+                    width: 25%;height: 100%;float: left;
+                    &.active{background: #ff8787;}
+                    a{
+                        display: inline-block;width: 100%;height: 100%;
+                        &.home-icon{background: url(../image/index/首页.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.cart-icon{background: url(../image/index/购物车.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.collect-icon{background: url(../image/index/收藏.png) 0 0 no-repeat;background-size: 100% 100%;}
+                        &.user-icon{background: url(../image/index/个人中心.png) 0 0 no-repeat;background-size: 100% 100%;}
+                    }
+                }
+            }
+        }
+    }
+}

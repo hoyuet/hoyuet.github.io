@@ -1,0 +1,75 @@
+html{font-family: "微软雅黑";background: #f4f4f4;}
+.color1{background: #122B40;}
+.color2{background: #D0E9C6;}
+.color3{background: #AFD9EE;}
+.color4{background: #D43F3A;}
+.color5{background: #ADADAD;}
+.clearfix::after{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;}
+.clearfix{*zoom:1;}
+div{box-sizing: border-box;}
+.container-index{
+    width: 100%;height: auto;min-height:1280px;padding-top: 96px;background: #fff;
+    header#header{
+        width: 100%;height: 96px;background: #fff;position: fixed;left: 0;top: 0;z-index: 99999;border-bottom: 1px solid #f1f1f1;
+        p{width: 100%;height: 100%;font-size: 27px;font-family: "微软雅黑";line-height: 96px;text-align: center;color: #000;
+            &.back{
+                width:90px;position: absolute;left:0;top:0;
+                a{
+                    display: inline-block;width: 100%;height: 100%;font-size: 20px;text-align: right;color: #595757;
+                    background: url(../image/back-1.png) 20px center no-repeat;background-size: 12px 18px;
+                }
+            }
+            &.my-order{
+                width:150px;position: absolute;right:0;top:0;
+                a{display: inline-block;width: 100%;height: 100%;font-size: 24px;color: #898989;}
+            }
+        }
+        
+        
+    }
+    #main{
+        width: 100%;height: auto;border-top:6px solid #FAFAFA;background: #fafafa;
+        .settlement-tips{
+            width: 100%;height: 178px;background: #fff;padding-top: 36px;
+            p{
+                box-sizing: border-box;width: 100%;height: 44px;line-height: 44px;padding: 10px 50px;font-size: 24px;color: #000;
+            }
+        }
+        .settlement-down-tips{
+            width: 100%;height: 178px;background: #fff;line-height: 178px;font-size: 24px;color: #000;text-align: center;
+        }
+        .guess-like{
+            width: 100%;height: auto;
+            .guess-like-title{
+                width: 100%;height: 70px;line-height: 70px;padding-left: 100px;color: #000;font-size: 27px;border-bottom: 1px solid #F1F1F1;
+                background: url(../image/icon/guess.png) 25px 18px no-repeat;background-size: 46px 45px;
+            }
+            .guess-like-content{
+                width: 100%;height: auto;background: #fff;
+               
+                li{
+                    list-style: none;float: left;box-sizing: border-box; width:33.33%;height:auto;min-height: 240px;
+                    &.first{
+                        position: relative;
+                        .img-wrap{
+                            width: 166px;height: 110px;margin: 20px auto;
+                            img{width: 100%;height: 100%;}
+                        }
+                        
+                        .title1{font-size: 20px;color: #000;margin-left: 15px;}
+                        .title2{font-size: 20px;color: #000;margin-top: -7px;margin-left: 15px;}
+                        .score{
+                            font-size: 15px;color: #ed5253;text-align: left;margin-left: 15px;margin-top: -2px;
+                            span{
+                                font-size: 24px;color: #ed5253;
+                            }
+                        }
+                    }                
+                
+                }
+            }
+        }
+        
+    }
+    
+}
