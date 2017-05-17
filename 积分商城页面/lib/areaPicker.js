@@ -592,7 +592,14 @@ $(function() {
 	$("#expressArea").click(function() {
 		$("#areaMask").fadeIn();
 //		$("#areaLayer").animate({"bottom": 0});
-		$('#areaWrap').animate({top:'1.18rem'});
+		$('#areaWrap').animate({top:'1.18rem'},500,function(){
+			 $(this).find('header').css({
+			 	position:'fixed',
+			 	left:'0',
+			 	top:'3.34rem',
+			 	width:'100%'
+			 });
+		});
 	});
 	/*关闭省市区选项*/
 	$("#areaMask, #closeArea").click(function() {
