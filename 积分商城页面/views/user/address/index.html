@@ -58,10 +58,21 @@
 		<script src="/积分商城页面/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/less.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/areaPicker.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/preLoad.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#areaWrap').scroll(function(){
+					var top=$(this).scrollTop();
+					$(this).find('header h3,header a').css({
+						top:top+'px'
+					});
+					console.log(top)
+				});
+			});
+		</script>
 		
 	</body>
 </html>
