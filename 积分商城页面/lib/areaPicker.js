@@ -583,6 +583,7 @@ function selectD(p,c,d) {
 function clockArea() {
 	$("#areaMask").fadeOut();
 //	$("#areaLayer").animate({"bottom": "-100%"});
+$('#areaWrap header').css({'position':'static'});
 $('#areaWrap').animate({top:'12.8rem'});
 	intProvince();
 }
