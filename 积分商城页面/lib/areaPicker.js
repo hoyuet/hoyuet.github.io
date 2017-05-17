@@ -583,7 +583,7 @@ function selectD(p,c,d) {
 function clockArea() {
 	$("#areaMask").fadeOut();
 //	$("#areaLayer").animate({"bottom": "-100%"});
-$('#areaWrap header').css({'position':'static'});
+//$('#areaWrap header').css({'position':'static'});
 $('#areaWrap').animate({top:'12.8rem'});
 	intProvince();
 }
@@ -593,14 +593,15 @@ $(function() {
 	$("#expressArea").click(function() {
 		$("#areaMask").fadeIn();
 //		$("#areaLayer").animate({"bottom": 0});
-		$('#areaWrap').animate({top:'1.18rem'},500,function(){
-			 $(this).find('header').css({
-			 	position:'fixed',
-			 	left:'0',
-			 	top:'3.34rem',
-			 	width:'100%'
-			 });
-		});
+//		$('#areaWrap').animate({top:'1.18rem'},500,function(){
+//			 $(this).find('header').css({
+//			 	position:'fixed',
+//			 	left:'0',
+//			 	top:'3.34rem',
+//			 	width:'100%'
+//			 });
+//		});
+		$('#areaWrap').animate({top:'1.18rem'});
 	});
 	/*关闭省市区选项*/
 	$("#areaMask, #closeArea").click(function() {
