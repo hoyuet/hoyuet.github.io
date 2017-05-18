@@ -93,6 +93,7 @@ div {
 .container-index #main ul {
   width: 100%;
   height: auto;
+  margin-bottom: 3.8rem;
 }
 .container-index #main ul li {
   box-sizing: border-box;
@@ -158,8 +159,11 @@ div {
   background: #ed5253;
   font-size: 0.27rem;
   color: #f4f4f4;
-  position: fixed;
+  /*position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0;*/
   z-index: 10;
+  position: relative;
+  left: 0;
+  top: 0;
 }

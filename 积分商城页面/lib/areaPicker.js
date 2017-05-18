@@ -530,7 +530,7 @@ function intProvince() {
 	areaList.html(areaCont);
 	$("#areaBox").scrollTop(0);
 	$("#areaWrap").scrollTop(0);
-//	$("#backUp").removeAttr("onClick").hide();
+	$("#areaList").scrollTop(0);
 }
 intProvince();
 
@@ -544,8 +544,8 @@ function selectP(p) {
 	areaList.html(areaCont);
 	$("#areaBox").scrollTop(0);
 	$("#areaWrap").scrollTop(0);
+	$("#areaList").scrollTop(0);
 	expressArea = province[p] + " > ";
-	$("#backUp").attr("onClick", "intProvince();").show();
 }
 
 /*选择城市*/
@@ -557,6 +557,7 @@ function selectC(p,c) {
 	areaList.html(areaCont);
 	$("#areaBox").scrollTop(0);
 	$("#areaWrap").scrollTop(0);
+	$("#areaList").scrollTop(0);
 	var sCity = city[p][c];
 	if (sCity != "省直辖县级行政单位") {
 		if (sCity == "东莞市" || sCity == "中山市" || sCity == "儋州市" || sCity == "嘉峪关市") {
@@ -569,7 +570,6 @@ function selectC(p,c) {
 			expressArea += sCity + " > ";
 		}
 	}
-	$("#backUp").attr("onClick", "selectP(" + p + ");");
 }
 
 /*选择区县*/
@@ -582,9 +582,7 @@ function selectD(p,c,d) {
 /*关闭省市区选项*/
 function clockArea() {
 	$("#areaMask").fadeOut();
-//	$("#areaLayer").animate({"bottom": "-100%"});
-//$('#areaWrap header').css({'position':'static'});
-$('#areaWrap').animate({top:'12.8rem'});
+	$('#areaWrap').animate({top:'12.8rem'});
 	intProvince();
 }
 
@@ -592,15 +590,6 @@ $(function() {
 	/*打开省市区选项*/
 	$("#expressArea").click(function() {
 		$("#areaMask").fadeIn();
-//		$("#areaLayer").animate({"bottom": 0});
-//		$('#areaWrap').animate({top:'1.18rem'},500,function(){
-//			 $(this).find('header').css({
-//			 	position:'fixed',
-//			 	left:'0',
-//			 	top:'3.34rem',
-//			 	width:'100%'
-//			 });
-//		});
 		$('#areaWrap').animate({top:'1.18rem'});
 	});
 	/*关闭省市区选项*/
