@@ -71,7 +71,7 @@
 					h2=$('.container').scrollTop();
 					h3=screen.height;
 					flag2=h1-h3;
-					if(h1==(h2+h3)){
+					if(h1>=(h2+h3)){
 						banner();
 					}
 						
@@ -96,13 +96,13 @@
 					        //记录触屏开始的数据
 					        moveY= e.targetTouches[0].clientY;
 					        distance = moveY-startY;
-					        if(distance>0&&flag==0){
+					        if(distance>0&&flag<=0){
 					        	$('.load').show();
 					        }
 					    })
 					    //绑定触屏结束事件
 						drag.addEventListener('touchend',function(e){
-					        if(distance<0&&flag2==h2){
+					        if(distance<0&&flag2>=h2){
 								$(document).scrollTop(0);
 								$('.container').animate({
 									top:-h3+'px'
@@ -116,7 +116,7 @@
 						        startY=0;
 						        moveY=0;
 						        distance=0;
-						   }else if(distance>0&&flag==0){
+						   }else if(distance>0&&flag<=0){
 						   		$('.load').slideUp(500)
 						   		$('.load').css('display','none');
 								$('.container').animate({
