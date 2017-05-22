@@ -106,8 +106,38 @@
 						});
 					}
 				});
-				
-				
+				$('#div3').bind(touchEvents.touchstart, function (event) {
+					event.preventDefault();
+					 
+				});
+				$('#div3').bind(touchEvents.touchmove, function (event) {
+					event.preventDefault();
+					 
+				});
+				 
+				$('#div3').bind(touchEvents.touchend, function (event) {
+					event.preventDefault();
+					var top=$('#div3').scrollTop();
+					console.log(top)
+					if(top<=0){
+//						alert(0);
+	//					$('.load').slideUp(500)
+	//			   		$('.load').css('display','none');
+						$('.container').animate({
+							top:0+'px'
+						},3000);
+						$('#div3').animate({
+							top:0+'px'
+						},3000,function(){
+							$(this).css('display','none');
+							$(document).scrollTop(h3);
+							
+						});
+					}
+					 
+				});
+								
+								
 
 					
 			});
