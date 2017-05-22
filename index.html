@@ -56,6 +56,7 @@
 		</div>
 	</div>
 		
+		
 		<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
@@ -70,39 +71,43 @@
 					h1=$('.wrap').height();
 					h2=$('.container').scrollTop();
 					h3=screen.height;
-					
+					if(h2>=(h1-h3)){
+//						alert(1)
+						$(document).scrollTop(0);
+						$('.container').animate({
+							top:-h3+'px'
+						},3000);
+						$('#div3').css('display','block').animate({
+							top:-h3+'px'
+						},3000,function(){
+							$(document).scrollTop(0);
+						});
+					}
 					
 					
 				});
 				$('#div3').scroll(function(){
-					top=$('#div3').scrollTop();
 					
+					var top=$('#div3').scrollTop();
+					console.log(top)
+					if(top<=0){
+//						alert(0);
+	//					$('.load').slideUp(500)
+	//			   		$('.load').css('display','none');
+						$('.container').animate({
+							top:0+'px'
+						},3000);
+						$('#div3').animate({
+							top:0+'px'
+						},3000,function(){
+							$(this).css('display','none');
+							$(document).scrollTop(h3);
+							
+						});
+					}
 				});
-				if(h2>=(h1-h3)){
-					$(document).scrollTop(0);
-					$('.container').animate({
-						top:-h3+'px'
-					},3000);
-					$('#div3').css('display','block').animate({
-						top:-h3+'px'
-					},3000,function(){
-						$(document).scrollTop(0);
-					});
-				}
-				if(top<=0){
-//					$('.load').slideUp(500)
-//			   		$('.load').css('display','none');
-					$('.container').animate({
-						top:0+'px'
-					},3000);
-					$('#div3').animate({
-						top:0+'px'
-					},3000,function(){
-						$(this).css('display','none');
-						$(document).scrollTop(h3);
-						
-					});
-				}
+				
+				
 
 					
 			});
