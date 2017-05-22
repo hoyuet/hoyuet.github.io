@@ -8,7 +8,7 @@
 			*{margin: 0;padding: 0;}
 			body{overflow: auto;}
 			.container{width: 100%;background: #aaa;overflow:auto;position: relative;left: 0;top: 0;}
-			.wrap{width: 100%;height: auto;overflow: auto;}
+			.wrap{width: 100%;height: auto;}
 			#div1{background: blueviolet;}
 			#div2{background: green;height: 100px;}
 			#div3{position: relative;left: 0;top: 0;background: purple;display: none;overflow: auto;}
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 		
-		<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
 				$('.container,.all,#div3').css({
@@ -70,73 +70,42 @@
 					h1=$('.wrap').height();
 					h2=$('.container').scrollTop();
 					h3=screen.height;
-					flag2=h1-h3;
-					if(h1<=(h2+h3)){
-						banner();
-					}
-						
+					
 					
 					
 				});
 				$('#div3').scroll(function(){
-					flag=$('#div3').scrollTop();
+					top=$('#div3').scrollTop();
+					
 				});
+				if(h2>=(h1-h3)){
+					$(document).scrollTop(0);
+					$('.container').animate({
+						top:-h3+'px'
+					},3000);
+					$('#div3').css('display','block').animate({
+						top:-h3+'px'
+					},3000,function(){
+						$(document).scrollTop(0);
+					});
+				}
+				if(top<=0){
+//					$('.load').slideUp(500)
+//			   		$('.load').css('display','none');
+					$('.container').animate({
+						top:0+'px'
+					},3000);
+					$('#div3').animate({
+						top:0+'px'
+					},3000,function(){
+						$(this).css('display','none');
+						$(document).scrollTop(h3);
+						
+					});
+				}
 
-					function banner () {
-						var drag = document.querySelector('body');
-					    var startY=0;
-					    var moveY=0;
-					    var distance=0;
-					    //绑定触屏事件
-					    drag.addEventListener('touchstart',function(e){
-					        //记录触屏开始的数据
-					        startY= e.targetTouches[0].clientY;
-					    })
-					    drag.addEventListener('touchmove',function(e){
-					        //记录触屏开始的数据
-					        moveY= e.targetTouches[0].clientY;
-					        distance = moveY-startY;
-					        if(distance>0&&flag<=0){
-					        	$('.load').show();
-					        }
-					    })
-					    //绑定触屏结束事件
-						drag.addEventListener('touchend',function(e){
-					        if(distance<0&&flag2<=h2){
-								$(document).scrollTop(0);
-								$('.container').animate({
-									top:-h3+'px'
-								},3000);
-								$('#div3').css('display','block').animate({
-									top:-h3+'px'
-								},3000,function(){
-									$(document).scrollTop(0);
-								});
-						        //数据重置
-						        startY=0;
-						        moveY=0;
-						        distance=0;
-						   }else if(distance>0&&flag<=0){
-						   		$('.load').slideUp(500)
-						   		$('.load').css('display','none');
-								$('.container').animate({
-									top:0+'px'
-								},3000);
-								$('#div3').animate({
-									top:0+'px'
-								},3000,function(){
-									$(this).css('display','none');
-									$(document).scrollTop(h3);
-									
-								});
-						    }
-						    //数据重置
-					        startY=0;
-					        moveY=0;
-					        distance=0;
-						})
-					}
+					
 			});
-		</script>		
+		</script>	
 	</body>
 </html>
