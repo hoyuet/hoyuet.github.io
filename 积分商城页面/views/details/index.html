@@ -160,42 +160,6 @@
 		<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/积分商城页面/lib/preLoad.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="/积分商城页面/lib/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>-->
-		<!--<script type="text/javascript">
-			$(function(){
-				function banner () {
-				   var drag = document.querySelector('.drag');
-				    var startY=0;
-				    var moveY=0;
-				    var distance=0;
-				    //绑定触屏事件
-				    drag.addEventListener('touchstart',function(e){
-				        //记录触屏开始的数据
-				        startY= e.targetTouches[0].clientY;
-				    })
-				    drag.addEventListener('touchmove',function(e){
-				        //记录触屏开始的数据
-				        moveY= e.targetTouches[0].clientY;
-				        distance = moveY-startY;
-				    })
-				    //绑定触屏结束事件
-				    drag.addEventListener('touchend',function(e){
-				        if(distance<0){
-				          $('.preloader').addClass('visible');
-				          setTimeout(function(){
-				          	$('.preloader').removeClass('visible');
-				          	$('.imgshow').css('display','block');
-				          },3000);
-				        }
-				        //数据重置
-				        startY=0;
-				        moveY=0;
-				        distance=0;
-				    })
-				}
-				banner();
-	        })
-		</script>-->
 		<script>
 			var oBody = $('body')[0];
 			var oDown = $('.down')[0];
@@ -216,14 +180,14 @@
 			},false);
 			oBody.addEventListener("touchend",function(e){
 				if(flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 100){
-					$(".top").slideUp(200);
+					$(".top").slideUp(500);
 //					oDown.style.display = "block";
 					$('.down').css('display','block');
 //					document.body.scrollTop = 50;
 					$(document).scrollTop(50);
 					flag = false;
 				}else if(!flag && $(document).scrollTop() < 10 && diffY < -100){
-					$(".top").slideDown(200,function(){
+					$(".top").slideDown(500,function(){
 //						oDown.style.display = "none";
 						$('.down').css('display','none');
 					});
