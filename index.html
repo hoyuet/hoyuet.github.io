@@ -66,7 +66,9 @@
 					height:screen.height+'px'
 				});
 				$(window).scroll(function(){
-				alert(1)
+					if($().scrollTop()<=0){
+					alert(0);
+					}
 				});
 				var flag=0,flag2=0,h1,h2,h3,h4;
 				$('.container').scroll(function(){
