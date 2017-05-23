@@ -64,15 +64,16 @@
 					width:'100%',
 					height:screen.height+'px'
 				});
-				var flag=0,flag2=0,h1,h2,h3;
+				var flag=0,flag2=0,h1,h2,h3,h4;
 				$('.container').scroll(function(){
 					console.log($('.wrap').height(),$('.container').scrollTop(),screen.height,$('.container')[0].scrollHeight,$('body').scrollTop(),$('#div3').scrollHeight)
 					
 					h1=$('.wrap').height();
 					h2=$('.container').scrollTop();
 					h3=screen.height;
+					h4=$('.container')[0].scrollHeight;
 					if(h2>=(h1-h3)){
-						alert(1)
+//						alert(1)
 						$(document).scrollTop(0);
 						$('.container').animate({
 							top:-h3+'px'
@@ -96,48 +97,64 @@
 	//			   		$('.load').css('display','none');
 						$('.container').animate({
 							top:0+'px'
-						},3000);
+						},1000);
 						$('#div3').animate({
 							top:0+'px'
-						},3000,function(){
+						},1000,function(){
 							$(this).css('display','none');
 							$(document).scrollTop(h3);
 							
 						});
 					}
 				});
-				$('#div3').bind(touchEvents.touchstart, function (event) {
-					event.preventDefault();
-					 
-				});
-				$('#div3').bind(touchEvents.touchmove, function (event) {
-					event.preventDefault();
-					 
-				});
-				 
-				$('#div3').bind(touchEvents.touchend, function (event) {
-					event.preventDefault();
-					var top=$('#div3').scrollTop();
-					console.log(top)
-					if(top<=0){
-//						alert(0);
-	//					$('.load').slideUp(500)
-	//			   		$('.load').css('display','none');
-						$('.container').animate({
-							top:0+'px'
-						},3000);
-						$('#div3').animate({
-							top:0+'px'
-						},3000,function(){
-							$(this).css('display','none');
-							$(document).scrollTop(h3);
-							
+				function banner () {
+					var drag = document.querySelector('body');
+				    var startY=0;
+				    var moveY=0;
+				    var distance=0;
+				    //绑定触屏事件
+				    drag.addEventListener('touchstart',function(e){
+				        //记录触屏开始的数据
+				        startY= e.targetTouches[0].clientY;
+				    })
+				    drag.addEventListener('touchmove',function(e){
+				        //记录触屏开始的数据
+				        moveY= e.targetTouches[0].clientY;
+				        distance = moveY-startY;
+				    })
+				    //绑定触屏结束事件
+					drag.addEventListener('touchend',function(e){
+				        if(distance<0&&h4>(h1+50)){
+							$(document).scrollTop(0);
+							$('.container').animate({
+								top:-h3+'px'
+							},3000);
+							$('#div3').css('display','block').animate({
+								top:-h3+'px'
+							},3000,function(){
+								$(document).scrollTop(0);
 						});
-					}
-					 
-				});
+					   }else if(distance>0&&h4>(h1+50)){
+					   	
+					   		$('.container').animate({
+								top:0+'px'
+							},1000);
+							$('#div3').animate({
+								top:0+'px'
+							},1000,function(){
+								$(this).css('display','none');
+								$(document).scrollTop(h3);
 								
-								
+							});
+					    }
+					    //数据重置
+				        startY=0;
+				        moveY=0;
+				        distance=0;
+					});
+				}
+				
+				
 
 					
 			});
