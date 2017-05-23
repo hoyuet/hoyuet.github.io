@@ -184,7 +184,7 @@
 //					oDown.style.display = "block";
 					$('.down').css('display','block');
 //					document.body.scrollTop = 50;
-					$(document).scrollTop(50);
+					$(document).scrollTop(screen.height);
 					flag = false;
 				}else if(!flag && $(document).scrollTop() < 10 && diffY < -100){
 					$(".top").slideDown(200,function(){
