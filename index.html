@@ -66,8 +66,11 @@
 					height:screen.height+'px'
 				});
 				$(window).scroll(function(){
-					if($(window).scrollTop()<=0){
+					if($(window).scrollTop()<0){
 					alert(0);
+					}
+					if($(window).scrollTop()>0){
+					alert(1);
 					}
 				});
 				var flag=0,flag2=0,h1,h2,h3,h4;
