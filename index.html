@@ -89,7 +89,7 @@
 				});
 				$(window).scroll(function(){
 					if($(window).scrollTop()<=0&&flag2){
-						$('.container').css('visibility','visible');
+						//$('.container').css('visibility','visible');
 						$('.container').animate({
 							top:0+'px'
 						},3000);
@@ -109,7 +109,7 @@
 							top:-h3+'px'
 						},3000,function(){
 							$(document).scrollTop(0);
-							$('.container').css('visibility','hidden');
+							//$('.container').css('visibility','hidden');
 						});
 					}
 				});
