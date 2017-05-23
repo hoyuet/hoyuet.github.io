@@ -88,9 +88,10 @@
 					
 				});
 				$(window).scroll(function(){
-					if($(window).scrollTop()<=0&&flag2){
 					flag=true;
 					flag2=false;
+					if($(window).scrollTop()<=100&&flag2){
+					
 						$('.container').animate({
 							top:0+'px'
 						},3000);
