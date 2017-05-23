@@ -65,6 +65,9 @@
 					width:'100%',
 					height:screen.height+'px'
 				});
+				if($(window).scrollTop()>0){
+	alert(1)
+}
 				var flag=0,flag2=0,h1,h2,h3,h4;
 				$('.container').scroll(function(){
 					console.log($('.wrap').height(),$('.container').scrollTop(),screen.height,$('.container')[0].scrollHeight,$('body').scrollTop(),$('#div3').scrollHeight)
