@@ -88,8 +88,15 @@
 					
 				});
 				$(window).scroll(function(){
-					if($(window).scrollTop()<0){
-						alert(0);
+					if($(window).scrollTop()<0&&flag2){
+						$('.container').animate({
+							top:0+'px'
+						},3000);
+						$('#div3').css('display','block').animate({
+							top:0+'px'
+						},3000,function(){
+							$(document).scrollTop(h3);
+						});
 					}
 					if($(window).scrollTop()>0&&flag){
 					$(document).scrollTop(0);
