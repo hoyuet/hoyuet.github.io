@@ -246,42 +246,35 @@
 	        })
 		</script>-->
 		<script>
-			var oBody = document.getElementsByTagName("body")[0];
-			var oHeader = $('.top')[0];
-			var oSection = $('.down')[0];
-			var oDiv1 = $('.drag')[0];
-			var oDiv2 = $('.drag-up')[0];
+			var oBody = $('body')[0];
+			var oDown = $('.down')[0];
 		  	var startX = 0;
 			var startY = 0;
 			var diffX = 0;
 			var diffY = 0;
 			var flag = true;
 			oBody.addEventListener("touchstart",function(e){
-				
 				var touches = e.touches;
 				startX = touches[0].pageX;
 				startY = touches[0].pageY;
-				console.log(1,startX,startY);
 			},false);
 			oBody.addEventListener("touchmove",function(e){
-				
 				var touches = e.touches;
 				diffY = startY - touches[0].pageY;
 				diffX = startX - touches[0].pageX;
-				console.log(2,diffX,diffY)
 			},false);
 			oBody.addEventListener("touchend",function(e){
-				console.log(3)
-				if(flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 100){
-					console.log(4)
+				if(flag && $(document).scrollHeight - $(document).clientHeight <= $(document).scrollTop() + 14 && diffY > 100){
 					$(".top").slideUp(200);
-					oSection.style.display = "block";
-					document.body.scrollTop = 50;
+//					oDown.style.display = "block";
+					$('.down').css('display','block');
+//					document.body.scrollTop = 50;
+					$(document).scrollTop(50);
 					flag = false;
-				}else if(!flag && document.body.scrollTop < 10 && diffY < -100){
-					console.log(5)
+				}else if(!flag && $(document).scrollTop() < 10 && diffY < -100){
 					$(".top").slideDown(200,function(){
-						oSection.style.display = "none";
+//						oDown.style.display = "none";
+						$('.down').css('display','none');
 					});
 					
 					flag = true;
