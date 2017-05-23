@@ -78,41 +78,14 @@
 					h2=$('.container').scrollTop();
 					h3=screen.height;
 					h4=$('.container')[0].scrollHeight;
-					if(h2>=(h1-h3+50)){
-//						alert(1)
-						$(document).scrollTop(0);
-						$('.container').animate({
-							top:-h3+'px'
-						},3000);
-						$('#div3').css('display','block').animate({
-							top:-h3+'px'
-						},3000,function(){
-							$(document).scrollTop(0);
-						});
-					}
+					
 				
 					
 				});
 				$('#div3').scroll(function(){
 					flag2=true;
 					flag=false;
-					var top=$('#div3').scrollTop();
-					console.log(top)
-					if(top<=50){
-//						alert(0);
-	//					$('.load').slideUp(500)
-	//			   		$('.load').css('display','none');
-						$('.container').animate({
-							top:0+'px'
-						},1000);
-						$('#div3').animate({
-							top:0+'px'
-						},1000,function(){
-							$(this).css('display','none');
-							$(document).scrollTop(h3);
-							
-						});
-					}
+					
 				});
 				$(window).scroll(function(){
 					if($(window).scrollTop()<0){
