@@ -14,6 +14,7 @@
 			#div3{position: relative;left: 0;top: 0;background: purple;display: none;overflow: auto;}
 			.load{height: 100px;display: none;}
 			.img-wrap{height: 1280px;}
+			header{display: block;width: 100%;height: 100px;background: #fff;text-align: center;line-height: 100px;}
 		</style>
 	</head>
 	<body>
@@ -54,10 +55,11 @@
 		
 			</div>
 		</div>
+		<header></header>
 	</div>
 		
-		
-		<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
 			$(function(){
 				$('.container,.all,#div3').css({
@@ -84,7 +86,7 @@
 							$(document).scrollTop(0);
 						});
 					}
-					
+					$('header').html(h1+', '+h2+', '+h3+', '+h4+', '+$('body').scrollTop()+', '+$('#div3')[0].scrollHeight);
 					
 				});
 				$('#div3').scroll(function(){
@@ -107,6 +109,7 @@
 						});
 					}
 				});
+				banner();
 				function banner () {
 					var drag = document.querySelector('body');
 				    var startY=0;
