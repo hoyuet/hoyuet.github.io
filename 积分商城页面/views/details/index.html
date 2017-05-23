@@ -264,7 +264,7 @@
 				diffX = startX - touches[0].pageX;
 			},false);
 			oBody.addEventListener("touchend",function(e){
-				if(flag && $(document).scrollHeight - $(document).clientHeight <= $(document).scrollTop() + 14 && diffY > 100){
+				if(flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 100){
 					$(".top").slideUp(200);
 //					oDown.style.display = "block";
 					$('.down').css('display','block');
