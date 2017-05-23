@@ -90,7 +90,7 @@
 				$(window).scroll(function(){
 					flag=true;
 					flag2=false;
-					if($(window).scrollTop()<=100&&flag2){
+					if($(window).scrollTop()<=-100&&flag2){
 					
 						$('.container').animate({
 							top:0+'px'
@@ -102,7 +102,7 @@
 							$('#div3').css('display','none')
 						});
 					}
-					if($(window).scrollTop()>0&&flag){
+					if($(window).scrollTop()>100&&flag){
 					$(document).scrollTop(0);
 					flag2=true;
 					flag=false;
