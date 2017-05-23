@@ -89,6 +89,7 @@
 				});
 				$(window).scroll(function(){
 					if($(window).scrollTop()<=0&&flag2){
+						$('.container').css('display','block');
 						$('.container').animate({
 							top:0+'px'
 						},3000);
@@ -96,6 +97,7 @@
 							top:0+'px'
 						},3000,function(){
 							$(document).scrollTop(h3);
+							$('#div3').css('display','none')
 						});
 					}
 					if($(window).scrollTop()>0&&flag){
@@ -107,6 +109,7 @@
 							top:-h3+'px'
 						},3000,function(){
 							$(document).scrollTop(0);
+							$('.container').css('display','none');
 						});
 					}
 				});
