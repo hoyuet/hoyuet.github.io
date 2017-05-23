@@ -117,7 +117,15 @@
 					alert(0);
 					}
 					if($(window).scrollTop()>0){
-					alert(1);
+					$(document).scrollTop(0);
+						$('.container').animate({
+							top:-h3+'px'
+						},3000);
+						$('#div3').css('display','block').animate({
+							top:-h3+'px'
+						},3000,function(){
+							$(document).scrollTop(0);
+						});
 					}
 				});
 				banner();
