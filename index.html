@@ -72,8 +72,7 @@
 				var flag=false,flag2=false,h1,h2,h3,h4;
 				$('.container').scroll(function(){
 					console.log($(window).scrollTop(),$('.wrap').height(),$('.container').scrollTop(),screen.height,$('.container')[0].scrollHeight,$('body').scrollTop(),$('#div3').scrollHeight)
-					flag=true;
-					flag2=false;
+					
 					h1=$('.wrap').height();
 					h2=$('.container').scrollTop();
 					h3=screen.height;
@@ -83,15 +82,15 @@
 					
 				});
 				$('#div3').scroll(function(){
-					flag2=true;
-					flag=false;
+					
 					
 				});
+				flag=true;
+				flag2=false;
 				$(window).scroll(function(){
-					flag=true;
-					flag2=false;
 					if($(window).scrollTop()<=-100&&flag2){
-					
+						flag=true;
+						flag2=false;
 						$('.container').animate({
 							top:0+'px'
 						},3000);
