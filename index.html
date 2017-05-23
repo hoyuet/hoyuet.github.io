@@ -14,7 +14,7 @@
 			#div3{position: relative;left: 0;top: 0;background: purple;display: none;overflow: auto;}
 			.load{height: 100px;display: none;}
 			.img-wrap{height: 1280px;}
-			header{display: block;width: 100%;height: 100px;background: #fff;text-align: center;line-height: 100px;position:fixed;left:0;top:0;}
+			header{display: block;width: 100%;height: 100px;background: #fff;text-align: center;line-height: 100px;}
 		</style>
 	</head>
 	<body>
@@ -55,33 +55,30 @@
 		
 			</div>
 		</div>
-		
+		<header></header>
 	</div>
 		
-		<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/积分商城页面/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
 			$(function(){
 				$('.container,.all,#div3').css({
 					width:'100%',
 					height:screen.height+'px'
 				});
-				$(window).scroll(function(){
-					if($(window).scrollTop()<0){
-					alert(0);
-					}
-					if($(window).scrollTop()>0){
-					alert(1);
-					}
-				});
+//				console.log($(window).scrollTop())
+//if($(window).scrollTop()>0){
+//	alert(1)
+//}
 				var flag=0,flag2=0,h1,h2,h3,h4;
 				$('.container').scroll(function(){
-					console.log($('.wrap').height(),$('.container').scrollTop(),screen.height,$('.container')[0].scrollHeight,$('body').scrollTop(),$('#div3').scrollHeight)
+					console.log($(window).scrollTop(),$('.wrap').height(),$('.container').scrollTop(),screen.height,$('.container')[0].scrollHeight,$('body').scrollTop(),$('#div3').scrollHeight)
 					
 					h1=$('.wrap').height();
 					h2=$('.container').scrollTop();
 					h3=screen.height;
 					h4=$('.container')[0].scrollHeight;
-					if(h2>=(h1-h3)){
+					if(h2>=(h1-h3+50)){
 //						alert(1)
 						$(document).scrollTop(0);
 						$('.container').animate({
@@ -93,14 +90,14 @@
 							$(document).scrollTop(0);
 						});
 					}
-					
+					$('header').html($(window).scrollTop());
 					
 				});
 				$('#div3').scroll(function(){
 					
 					var top=$('#div3').scrollTop();
 					console.log(top)
-					if(top<=0){
+					if(top<=50){
 //						alert(0);
 	//					$('.load').slideUp(500)
 	//			   		$('.load').css('display','none');
@@ -114,6 +111,14 @@
 							$(document).scrollTop(h3);
 							
 						});
+					}
+				});
+				$(window).scroll(function(){
+					if($(window).scrollTop()<0){
+					alert(0);
+					}
+					if($(window).scrollTop()>0){
+					alert(1);
 					}
 				});
 				banner();
