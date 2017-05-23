@@ -180,14 +180,14 @@
 			},false);
 			oBody.addEventListener("touchend",function(e){
 				if(flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 100){
-					$(".top").slideUp(500);
+					$(".top").slideUp();
 //					oDown.style.display = "block";
 					$('.down').css('display','block');
 //					document.body.scrollTop = 50;
 					$(document).scrollTop(50);
 					flag = false;
 				}else if(!flag && $(document).scrollTop() < 10 && diffY < -100){
-					$(".top").slideDown(500,function(){
+					$(".top").slideDown(200,function(){
 //						oDown.style.display = "none";
 						$('.down').css('display','none');
 					});
