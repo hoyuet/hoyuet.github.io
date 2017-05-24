@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>修改昵称</title>
+		<link rel="stylesheet" href="/积分商城页面/css/reset.css" />
+		<!--<link rel="stylesheet/less" type="text/css" href="/积分商城页面/css/change_name.less"/>-->
+		<link rel="stylesheet" href="/积分商城页面/css/change_name.css" />
+		<link rel="stylesheet" type="text/css" href="/积分商城页面/css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="container-index clearfix">
+			<!--首页标题-->
+			<header id="header">
+				<p class="title">修改昵称</p>
+				<p class="back"><a href="javascript:window.history.go(-1);">返回</a></p>
+				<p class="save">保存</p>
+			</header>
+			<!--main-->
+			<div id="main">
+				<div class="change">
+					<input type="text" value="123456" /><span>x</span>
+				</div>
+				<div class="change-tips">
+					4-20个字符，可由中英文、数字、“-”“_”组成
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<script src="/积分商城页面/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/preLoad.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.change input').on('change',function(){
+					console.log($(this).val())
+				});
+				$('.change input').on('keyup',function(){
+					$(this).attr({value:$(this).val()});
+				});
+				//清空
+				$('.change span').on('click',function(){
+					$('.change input').val('');
+					$('.change input').attr({value:''});
+				});
+				
+				
+			});
+		</script>
+	</body>
+</html>

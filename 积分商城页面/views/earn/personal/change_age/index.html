@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>选择年龄段</title>
+		<link rel="stylesheet" href="/积分商城页面/css/reset.css" />
+		<!--<link rel="stylesheet/less" type="text/css" href="/积分商城页面/css/change_age.less"/>-->
+		<link rel="stylesheet" href="/积分商城页面/css/change_age.css" />
+		<link rel="stylesheet" type="text/css" href="/积分商城页面/css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="container-index clearfix">
+			<!--首页标题-->
+			<header id="header">
+				<p class="title">选择年龄段</p>
+				<p class="back"><a href="javascript:window.history.go(-1);">返回</a></p>
+				<p class="save">保存</p>
+			</header>
+			<!--main-->
+			<div id="main">
+				<ul class="clearfix age-selecte">
+					<li>18岁以下
+						<p><input type="radio" name="age" checked="checked" id="checkbox-1"><label for="checkbox-1">✔</label></p>
+					</li>
+						
+					<li>18-35岁						
+						<p><input type="radio" name="age"  id="checkbox-2"><label for="checkbox-2">✔</label></p>
+						
+					</li>					
+					<li>35-45岁
+						<p><input type="radio" name="age"  id="checkbox-3"><label for="checkbox-3">✔</label></p>
+						
+					</li>
+					<li>45-59岁						
+						<p><input type="radio" name="age" id="checkbox-4"><label for="checkbox-4">✔</label></p>
+						
+					</li>					
+					<li>59岁以上
+						<p><input type="radio" name="age"  id="checkbox-5"><label for="checkbox-5">✔</label></p>
+						
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		
+		<script src="/积分商城页面/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="/积分商城页面/js/index.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="/积分商城页面/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/积分商城页面/lib/preLoad.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.age-selecte li').each(function(i){
+					$('.age-selecte li').eq(i).on('click',function(){
+						$('.age-selecte').find('input').removeAttr('checked');
+						$(this).find('input').attr({checked:'checked'});
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
