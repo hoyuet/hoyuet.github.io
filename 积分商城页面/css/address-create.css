@@ -85,19 +85,16 @@ div {
 .container-index #main {
   width: 100%;
   height: auto;
-  min-height: 11.5rem;
-  float: left;
   background: #f1f1f1;
   border-bottom: 1px solid #F1F1F1;
   border-top: 1px solid #F1F1F1;
   overflow: hidden;
 }
 .container-index #main form{
-width: 100%;height: 11.5rem;}
+width: 100%;height: 12rem;}
 .container-index #main ul {
   width: 100%;
   height: auto;
-  min-height: 11.5rem;
 }
 .container-index #main ul li {
   box-sizing: border-box;
@@ -160,8 +157,8 @@ width: 100%;height: 11.5rem;}
   background: #ed5253;
   font-size: 0.27rem;
   color: #f4f4f4;
-  /*position: fixed;
+  position: fixed;
   left: 0;
-  bottom: 0;*/
+  bottom: 0;
   z-index: 10;
 }
