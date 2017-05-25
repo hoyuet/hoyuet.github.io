@@ -162,8 +162,8 @@ width: 100%;height: 10.96rem;overflow: hidden;}
   left: 0;
   bottom: 0;
   z-index: 10;*/
-position: absolute;
+position: relative;
 left: 0;
-bottom: -0.96rem;
+bottom: 0rem;
 z-index: 10;
 }
