@@ -158,6 +158,7 @@ div {
   background: #ed5253;
   text-align: center;
   float: left;
+  position: fixed;left: 0;bottom: 0;
 }
 .container-index #main .address-add a {
   display: inline-block;
