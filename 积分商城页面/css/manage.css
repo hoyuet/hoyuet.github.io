@@ -154,7 +154,7 @@ div {
 }
 .container-index #main .address-add {
   width: 100%;
-  height: 0.58rem;
+  height: 0.88rem;
   background: #ed5253;
   text-align: center;
   float: left;
@@ -164,9 +164,9 @@ div {
   width: 1.65rem;
   height: 100%;
   text-align: right;
-  line-height: 0.58rem;
+  line-height: 0.88rem;
   font-size: 0.27rem;
   color: #fff;
-  background: url(../image/user/add_address.png) 0 0.14rem no-repeat;
+  background: url(../image/user/add_address.png) 0 center no-repeat;
   background-size: 0.28rem 0.28rem;
 }
