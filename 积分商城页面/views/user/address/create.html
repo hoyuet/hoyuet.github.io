@@ -63,6 +63,7 @@
 			$(function(){
 				var oHeight = $(document).height(); //浏览器当前的高度
 				$(window).resize(function(){
+					alert(oHeight)
 					if($(document).height() < oHeight){
 				        $(".address-save").css({
 				        	'position':'relative'
