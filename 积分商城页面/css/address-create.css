@@ -35,7 +35,7 @@ div {
   height: 12.8rem;
   background: #fff;
   padding-top: 0.96rem;
-  padding-bottom: 0.96rem;
+  /*padding-bottom: 0.96rem;*/
 }
 .container-index header#header {
   width: 100%;
