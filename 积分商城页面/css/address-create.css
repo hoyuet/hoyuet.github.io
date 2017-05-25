@@ -91,7 +91,7 @@ div {
   overflow: hidden;
 }
 .container-index #main form{
-width: 100%;height: auto;}
+width: 100%;height: auto;overflow: hidden;}
 .container-index #main ul {
   width: 100%;
   height: auto;
