@@ -88,10 +88,9 @@ div {
   background: #f1f1f1;
   border-bottom: 1px solid #F1F1F1;
   border-top: 1px solid #F1F1F1;
-  overflow: hidden;
 }
 .container-index #main form{
-width: 100%;height: auto;overflow: hidden;}
+width: 100%;height: auto;}
 .container-index #main ul {
   width: 100%;
   height: auto;
