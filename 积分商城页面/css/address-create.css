@@ -36,6 +36,7 @@ div {
   background: #fff;
   padding-top: 0.96rem;
   /*padding-bottom: 0.96rem;*/
+ overflow: hidden;
 }
 .container-index header#header {
   width: 100%;
