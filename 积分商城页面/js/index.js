@@ -153,7 +153,7 @@ $(function(){
 				});
 			});
 		});
-		$('.nums-select .close').on('click',function(){
+		$('.nums-select .close,.behavior .cart').on('click',function(){
 			$('.nums-select').animate({
 				bottom:'-5rem'
 			},500);
